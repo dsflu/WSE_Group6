@@ -1,0 +1,21 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm13" name="UpdateDB" gr:x="560" gr:y="255">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm13#icu13" gr:x="5" gr:y="155">
+      <InputCollectorParameter id="mov1#opm13#icu13#icp35" name="result"/>
+      <InputCollectorParameter id="mov1#opm13#icu13#icp36" name="cam_oid"/>
+      <OKLink id="mov1#opm13#icu13#oln43" name="OKFlow22" to="mov1#opm13#mfu1">
+        <LinkParameter id="mov1#opm13#icu13#oln43#par128" name="cam_oid_KeyCondition13 [oid_campaign]" source="mov1#opm13#icu13#icp36" target="mov1#opm13#mfu1#su35#kcond18.ent3#att7"/>
+        <LinkParameter id="mov1#opm13#icu13#oln43#par129" name="result_popularity" source="mov1#opm13#icu13#icp35" target="mov1#opm13#mfu1.ent3#att12"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov1#opm13#mfu1" name="UpdateDB" gr:x="325" gr:y="155" entity="ent3">
+      <Selector id="mov1#opm13#mfu1#su35" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm13#mfu1#su35#kcond18" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm13#mfu1#oln44" name="OKFlow23" to="mov1#opm13#okcu11" automaticCoupling="true"/>
+      <KOLink id="mov1#opm13#mfu1#kln27" name="KOFlow15" to="mov1#opm13#kocu12" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov1#opm13#okcu11" name="OK Port6" gr:x="560" gr:y="80"/>
+    <KOCollectorUnit id="mov1#opm13#kocu12" name="KO Port8" gr:x="560" gr:y="205"/>
+  </OperationUnits>
+</OperationModule>

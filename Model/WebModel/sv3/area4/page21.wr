@@ -1,0 +1,31 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="5" id="sv3#area4#page21" name="SearchPage">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#area4#page21#enu2" name="SearchTagForm" linkOrder="sv3#area4#page21#enu2#ln12">
+      <Field id="sv3#area4#page21#enu2#fld13" name="Tag" type="string" modifiable="true"/>
+      <Link id="sv3#area4#page21#enu2#ln12" name="SearchCampaign" to="sv3#miu12" type="normal" validate="true">
+        <LinkParameter id="sv3#area4#page21#enu2#ln12#par64" name="Tag_tag" source="sv3#area4#page21#enu2#fld13" target="sv3#miu12.mov1#opm9#icu9#icp29"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area4#page21#enu2">
+          <layout:Field field="sv3#area4#page21#enu2#fld13"/>
+          <layout:Link link="sv3#area4#page21#enu2#ln12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

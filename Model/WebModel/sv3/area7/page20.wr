@@ -1,0 +1,48 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="105" gr:y="175" id="sv3#area7#page20" name="QuestionDetails">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#area7#page20#dau5" name="QuestionDetails" entity="ent6" displayAttributes="ent6#att19" linkOrder="sv3#area7#page20#dau5#ln83">
+      <Selector id="sv3#area7#page20#dau5#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area7#page20#dau5#su15#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area7#page20#dau5#ln80" name="Flow80" to="sv3#area7#stu9" type="transport" validate="true">
+        <LinkParameter id="sv3#area7#page20#dau5#ln80#par127" name="oid_question_QuestiontxParam.oid_question" source="data.ent6#att18" target="sv3#area7#stu9.ctx3.ent6#att18"/>
+      </Link>
+      <Link id="sv3#area7#page20#dau5#ln83" name="SeeAnswer" to="sv3#area7#page19#dau4" type="normal" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area7#page20#dau5">
+          <layout:Attribute attribute="ent6#att19"/>
+          <layout:Link link="sv3#area7#page20#dau5#ln83"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

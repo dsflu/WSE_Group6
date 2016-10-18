@@ -1,0 +1,45 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv4#area8#page10" name="CreatCampaignPage">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="5" id="sv4#area8#page10#gtu2" name="GetCampaigner" contextParameters="UserCtxParam">
+      <Link id="sv4#area8#page10#gtu2#ln17" name="Flow17" to="sv4#miu5" type="transport" validate="true">
+        <LinkParameter id="sv4#area8#page10#gtu2#ln17#par60" name="UserCtxParam.oid_user_campaigner" source="sv4#area8#page10#gtu2.UserCtxParam" target="sv4#miu5.mov1#opm4#icu4#icp24"/>
+      </Link>
+    </GetUnit>
+    <EntryUnit gr:x="175" gr:y="0" id="sv4#area8#page10#enu7" name="Campaigninformation" entity="ent3" linkOrder="sv4#area8#page10#enu7#ln18" fieldOrder="sv4#area8#page10#enu7#fld8 sv4#area8#page10#enu7#fld9 sv4#area8#page10#enu7#fld10 sv4#area8#page10#enu7#fld11">
+      <Link id="sv4#area8#page10#enu7#ln18" name="CreatCampaign" to="sv4#miu5" type="normal" validate="true">
+        <LinkParameter id="sv4#area8#page10#enu7#ln18#par55" name="description_description" source="sv4#area8#page10#enu7#fld9" target="sv4#miu5.mov1#opm4#icu4#icp16"/>
+        <LinkParameter id="sv4#area8#page10#enu7#ln18#par56" name="expiration_expiration" source="sv4#area8#page10#enu7#fld11" target="sv4#miu5.mov1#opm4#icu4#icp19"/>
+        <LinkParameter id="sv4#area8#page10#enu7#ln18#par57" name="goal_goal" source="sv4#area8#page10#enu7#fld10" target="sv4#miu5.mov1#opm4#icu4#icp17"/>
+        <LinkParameter id="sv4#area8#page10#enu7#ln18#par58" name="title_title" source="sv4#area8#page10#enu7#fld8" target="sv4#miu5.mov1#opm4#icu4#icp15"/>
+      </Link>
+      <Field id="sv4#area8#page10#enu7#fld8" name="title" type="string" modifiable="true"/>
+      <Field id="sv4#area8#page10#enu7#fld9" type="text" modifiable="true" name="description"/>
+      <Field id="sv4#area8#page10#enu7#fld11" name="expiration" type="timestamp" modifiable="true"/>
+      <Field id="sv4#area8#page10#enu7#fld10" name="goal" type="integer" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area8#page10#enu7">
+          <layout:Link link="sv4#area8#page10#enu7#ln18"/>
+          <layout:Field field="sv4#area8#page10#enu7#fld8"/>
+          <layout:Field field="sv4#area8#page10#enu7#fld9"/>
+          <layout:Field field="sv4#area8#page10#enu7#fld10"/>
+          <layout:Field field="sv4#area8#page10#enu7#fld11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

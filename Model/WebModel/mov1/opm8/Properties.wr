@@ -1,0 +1,18 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="60" gr:y="260" id="mov1#opm8" name="Create Tag">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm8#icu8" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm8#icu8#icp28" name="campaign"/>
+      <InputCollectorParameter id="mov1#opm8#icu8#icp27" name="keyword"/>
+      <OKLink id="mov1#opm8#icu8#oln12" name="OKFlow12" to="mov1#opm8#cru7">
+        <LinkParameter id="mov1#opm8#icu8#oln12#par23" name="campaign_Campaign.oid_campaign(TagToCampaign)" source="mov1#opm8#icu8#icp28" target="mov1#opm8#cru7.rel4#role8.ent3#att7"/>
+        <LinkParameter id="mov1#opm8#icu8#oln12#par24" name="keyword_keyword" source="mov1#opm8#icu8#icp27" target="mov1#opm8#cru7.ent7#att21"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="315" gr:y="60" id="mov1#opm8#cru7" name="CreateTag" entity="ent7">
+      <OKLink id="mov1#opm8#cru7#oln20" name="OKFlow20" to="mov1#opm8#okcu7" automaticCoupling="true"/>
+      <KOLink id="mov1#opm8#cru7#kln17" name="KOFlow17" to="mov1#opm8#kocu8" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="470" gr:y="40" id="mov1#opm8#okcu7" name="OK Port Creat Tag"/>
+    <KOCollectorUnit gr:x="470" gr:y="145" id="mov1#opm8#kocu8" name="KO Port Creat Tag"/>
+  </OperationUnits>
+</OperationModule>

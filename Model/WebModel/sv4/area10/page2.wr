@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="215" id="sv4#area10#page2" name="CreatTag">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv4#area10#page2#enu1" name="CreatTag" fieldOrder="sv4#area10#page2#enu1#fld12" linkOrder="sv4#area10#page2#enu1#ln4 sv4#area10#page2#enu1#ln7">
+      <Field id="sv4#area10#page2#enu1#fld12" name="keyword" type="string" modifiable="true"/>
+      <Link id="sv4#area10#page2#enu1#ln4" name="CreateAnotherTag" to="sv4#miu10" type="normal" validate="true">
+        <LinkParameter id="sv4#area10#page2#enu1#ln4#par71" name="keyword_keyword" source="sv4#area10#page2#enu1#fld12" target="sv4#miu10.mov1#opm8#icu8#icp27"/>
+      </Link>
+      <Link id="sv4#area10#page2#enu1#ln7" name="Finish" to="sv4#miu11" type="normal" validate="true">
+        <LinkParameter id="sv4#area10#page2#enu1#ln7#par26" name="keyword_keyword" source="sv4#area10#page2#enu1#fld12" target="sv4#miu11.mov1#opm8#icu8#icp27"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit gr:x="105" gr:y="0" id="sv4#area10#page2#gtu6" name="GetCampaign" contextParameters="ctx1">
+      <Link id="sv4#area10#page2#gtu6#ln3" name="Flow3" to="sv4#miu10" type="transport" validate="true">
+        <LinkParameter id="sv4#area10#page2#gtu6#ln3#par25" name="CampaigntxParam.oid_campaign_campaign" source="sv4#area10#page2#gtu6.ctx1.ent3#att7" target="sv4#miu10.mov1#opm8#icu8#icp28"/>
+      </Link>
+      <Link id="sv4#area10#page2#gtu6#ln9" name="Flow9" to="sv4#miu11" type="transport" validate="true">
+        <LinkParameter id="sv4#area10#page2#gtu6#ln9#par27" name="CampaigntxParam.oid_campaign_campaign" source="sv4#area10#page2#gtu6.ctx1.ent3#att7" target="sv4#miu11.mov1#opm8#icu8#icp28"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area10#page2#enu1">
+          <layout:Field field="sv4#area10#page2#enu1#fld12"/>
+          <layout:Link link="sv4#area10#page2#enu1#ln4"/>
+          <layout:Link link="sv4#area10#page2#enu1#ln7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

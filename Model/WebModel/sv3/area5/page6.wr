@@ -1,0 +1,40 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area5#page6" name="SupporterPage">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="15" id="sv3#area5#page6#gtu4" name="GetSupporter" contextParameters="UserCtxParam">
+      <Link id="sv3#area5#page6#gtu4#ln1" name="Flow1" to="sv3#area5#page6#dau1" type="transport" validate="true">
+        <LinkParameter id="sv3#area5#page6#gtu4#ln1#par20" name="UserCtxParam.oid_user_KeyCondition1 [oid_user]" source="sv3#area5#page6#gtu4.UserCtxParam" target="sv3#area5#page6#dau1#su1#kcond1.userOID"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="185" gr:y="0" id="sv3#area5#page6#dau1" name="SupporterDetails" entity="ent2" displayAttributes="userName password email User#att1 User#att2 ent2#att6">
+      <Selector id="sv3#area5#page6#dau1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area5#page6#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area5#page6#dau1#ln34" name="Flow34" to="sv3#lou1" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area5#page6#dau1">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att1"/>
+          <layout:Attribute attribute="User#att2"/>
+          <layout:Attribute attribute="ent2#att6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

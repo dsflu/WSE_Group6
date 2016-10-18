@@ -1,0 +1,48 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="45" gr:y="180" id="mov1#opm3" name="SupporterRegister">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm3#icu3" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm3#icu3#icp10" name="username"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp14" name="payment information"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp13" name="birthdate"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp12" name="name"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp11" name="password"/>
+      <OKLink id="mov1#opm3#icu3#oln4" name="OKFlow4" to="mov1#opm3#seu11">
+        <LinkParameter id="mov1#opm3#icu3#oln4#par6" name="username_super_name" source="mov1#opm3#icu3#icp10" target="mov1#opm3#seu11#su19#acond4"/>
+      </OKLink>
+      <Link id="mov1#opm3#icu3#ln21" name="Flow21" to="mov1#opm3#cru2" type="transport" validate="true">
+        <LinkParameter id="mov1#opm3#icu3#ln21#par142" name="birthdate_birthdate" source="mov1#opm3#icu3#icp13" target="mov1#opm3#cru2.User#att1"/>
+        <LinkParameter id="mov1#opm3#icu3#ln21#par143" name="name_name" source="mov1#opm3#icu3#icp12" target="mov1#opm3#cru2.email"/>
+        <LinkParameter id="mov1#opm3#icu3#ln21#par144" name="password_password" source="mov1#opm3#icu3#icp11" target="mov1#opm3#cru2.password"/>
+        <LinkParameter id="mov1#opm3#icu3#ln21#par145" name="payment information_payment_information" source="mov1#opm3#icu3#icp14" target="mov1#opm3#cru2.User#att2"/>
+        <LinkParameter id="mov1#opm3#icu3#ln21#par146" name="username_userName" source="mov1#opm3#icu3#icp10" target="mov1#opm3#cru2.userName"/>
+        <LinkParameter id="mov1#opm3#icu3#ln21#par10" name="2_Group.oid_group(defaultGroup)" sourceValue="2" target="mov1#opm3#cru2.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm3#icu3#ln21#par11" name="2_Group.oid_group(groups)" sourceValue="2" target="mov1#opm3#cru2.User2Group.groupOID"/>
+        <LinkParameter id="mov1#opm3#icu3#ln21#par12" name="0_wisdom" sourceValue="0" target="mov1#opm3#cru2.ent2#att6"/>
+      </Link>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="385" gr:y="70" id="mov1#opm3#cru2" name="SupporterRegister" entity="ent2">
+      <KOLink id="mov1#opm3#cru2#kln6" name="KOFlow6" to="mov1#opm3#kocu3" automaticCoupling="true"/>
+      <OKLink id="mov1#opm3#cru2#oln17" name="OKFlow17" to="mov1#opm3#okcu6">
+        <LinkParameter id="mov1#opm3#cru2#oln17#par50" name="password_password" source="passwordArray" target="mov1#opm3#okcu6#ocp4"/>
+        <LinkParameter id="mov1#opm3#cru2#oln17#par51" name="userName_username" source="userNameArray" target="mov1#opm3#okcu6#ocp3"/>
+      </OKLink>
+    </CreateUnit>
+    <KOCollectorUnit gr:x="625" gr:y="200" id="mov1#opm3#kocu3" name="KO Port Register S"/>
+    <OKCollectorUnit gr:x="625" gr:y="65" id="mov1#opm3#okcu6" name="OK Port Register S">
+      <OutputCollectorParameter id="mov1#opm3#okcu6#ocp4" name="password"/>
+      <OutputCollectorParameter id="mov1#opm3#okcu6#ocp3" name="username"/>
+    </OKCollectorUnit>
+    <IsNotNullUnit gr:x="430" gr:y="210" id="mov1#opm3#inn3" name="Is Not Null">
+      <KOLink id="mov1#opm3#inn3#kln31" name="KOFlow31" to="mov1#opm3#cru2" automaticCoupling="true"/>
+      <OKLink id="mov1#opm3#inn3#oln46" name="OKFlow46" to="mov1#opm3#kocu3" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <SelectorUnit gr:x="290" gr:y="250" id="mov1#opm3#seu11" name="SelectSuper" entity="ent2">
+      <Selector id="mov1#opm3#seu11#su19" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#opm3#seu11#su19#acond4" name="super_name" predicate="eq" booleanOperator="or" implied="false" attributes="userName"/>
+      </Selector>
+      <OKLink id="mov1#opm3#seu11#oln37" name="OKFlow37" to="mov1#opm3#inn3">
+        <LinkParameter id="mov1#opm3#seu11#oln37#par7" name="oid_user_Input" source="userOIDArray" target="mov1#opm3#inn3.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

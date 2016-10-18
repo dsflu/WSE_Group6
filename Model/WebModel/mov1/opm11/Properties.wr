@@ -1,0 +1,28 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="570" gr:y="180" id="mov1#opm11" name="Donate">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm11#icu11" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm11#icu11#icp34" name="supporter"/>
+      <InputCollectorParameter id="mov1#opm11#icu11#icp33" name="contribution"/>
+      <OKLink id="mov1#opm11#icu11#oln41" name="OKFlow41" to="mov1#opm11#cnu2">
+        <LinkParameter id="mov1#opm11#icu11#oln41#par117" name="supporter_KeyCondition4 [oid_user] [Suppporter] [Source]" source="mov1#opm11#icu11#icp34" target="mov1#opm11#cnu2#su33#kcond16.userOID"/>
+        <LinkParameter id="mov1#opm11#icu11#oln41#par118" name="contribution_KeyCondition5 [oid_contribution] [Contribution] [Target]" source="mov1#opm11#icu11#icp33" target="mov1#opm11#cnu2#su34#kcond17.ent4#att14"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ConnectUnit id="mov1#opm11#cnu2" name="addDonate" gr:x="325" gr:y="40" relationship="rel2#role3">
+      <SourceSelector id="mov1#opm11#cnu2#su33" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm11#cnu2#su33#kcond16" name="KeyCondition4" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="mov1#opm11#cnu2#su34" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm11#cnu2#su34#kcond17" name="KeyCondition5" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="mov1#opm11#cnu2#oln40" name="OKFlow12" to="mov1#opm11#okcu10">
+        <LinkParameter id="mov1#opm11#cnu2#oln40#par116" name="Target oid_contribution [Contribution]_TargetCon" source="targetent4#att14" target="mov1#opm11#okcu10#ocp8"/>
+      </OKLink>
+      <KOLink id="mov1#opm11#cnu2#kln24" name="KOFlow12" to="mov1#opm11#kocu11" automaticCoupling="true"/>
+    </ConnectUnit>
+    <KOCollectorUnit id="mov1#opm11#kocu11" name="KO Port6" gr:x="775" gr:y="125"/>
+    <OKCollectorUnit id="mov1#opm11#okcu10" name="OK Port5" gr:x="775" gr:y="25">
+      <OutputCollectorParameter id="mov1#opm11#okcu10#ocp8" name="TargetCon"/>
+    </OKCollectorUnit>
+  </OperationUnits>
+</OperationModule>

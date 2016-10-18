@@ -1,0 +1,71 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="375" id="sv3#area7#page19" name="AnswerPage">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#area7#page19#dau4" name="AnswerDetails" entity="ent5" displayAttributes="ent5#att5">
+      <Selector id="sv3#area7#page19#dau4#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area7#page19#dau4#su14#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv3#area7#page19#dau4#su14#rcond14" name="QuestionToAnswer" role="rel13#role25" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit gr:x="380" gr:y="15" id="sv3#area7#page19#gtu23" name="GetQuestion" contextParameters="ctx3">
+      <Link id="sv3#area7#page19#gtu23#ln82" name="Flow82" to="sv3#area7#page19#seu1" type="transport" validate="true">
+        <LinkParameter id="sv3#area7#page19#gtu23#ln82#par131" name="QuestiontxParam.oid_question_q2a [oid_question]" source="sv3#area7#page19#gtu23.ctx3.ent6#att18" target="sv3#area7#page19#seu1#su17#rcond15.ent6#att18"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="170" gr:y="190" id="sv3#area7#page19#seu1" name="Selector1" entity="ent5">
+      <Selector id="sv3#area7#page19#seu1#su17" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area7#page19#seu1#su17#rcond15" name="QuestionToAnswer" role="rel13#role25" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area7#page19#seu1#ln85" name="Flow85" to="sv3#area7#page19#dau4" type="transport" validate="true">
+        <LinkParameter id="sv3#area7#page19#seu1#ln85#par132" name="oid_answer_KeyCondition4 [oid_answer]" source="ent5#att3Array" target="sv3#area7#page19#dau4#su14#kcond4.ent5#att3"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area7#page19#dau4">
+          <layout:Attribute attribute="ent5#att5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

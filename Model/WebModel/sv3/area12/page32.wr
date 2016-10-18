@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="395" gr:y="20" id="sv3#area12#page32" name="SearchCampaign">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#area12#page32#enu10" name="TitleForm" linkOrder="sv3#area12#page32#enu10#ln45">
+      <Field id="sv3#area12#page32#enu10#fld20" name="Title" type="string" modifiable="true"/>
+      <Link id="sv3#area12#page32#enu10#ln45" name="Search" to="sv3#area12#page34#pwu16" type="normal" validate="true">
+        <LinkParameter id="sv3#area12#page32#enu10#ln45#par89" name="keyword_AttConditionTitle" source="sv3#area12#page32#enu10#fld20" target="sv3#area12#page34#pwu16#su25#acond2"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit gr:x="115" gr:y="0" id="sv3#area12#page32#enu11" name="TagForm" linkOrder="sv3#area12#page32#enu11#ln46">
+      <Field id="sv3#area12#page32#enu11#fld21" name="Keyword" type="string" modifiable="true"/>
+      <Link id="sv3#area12#page32#enu11#ln46" name="Search" to="sv3#miu13" type="normal" validate="true">
+        <LinkParameter id="sv3#area12#page32#enu11#ln46#par94" name="Keyword_keyword" source="sv3#area12#page32#enu11#fld21" target="sv3#miu13.mov1#opm9#icu9#icp29"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page32#enu10">
+          <layout:Field field="sv3#area12#page32#enu10#fld20"/>
+          <layout:Link link="sv3#area12#page32#enu10#ln45"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page32#enu11">
+          <layout:Field field="sv3#area12#page32#enu11#fld21"/>
+          <layout:Link link="sv3#area12#page32#enu11#ln46"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

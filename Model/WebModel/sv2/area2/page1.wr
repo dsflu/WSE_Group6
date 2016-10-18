@@ -1,0 +1,79 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area2#page1" name="Login or Register">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="80" id="sv2#area2#page1#enu3" name="Register" entity="User" linkOrder="sv2#area2#page1#enu3#ln5 sv2#area2#page1#enu3#ln6" fieldOrder="sv2#area2#page1#enu3#fld3 sv2#area2#page1#enu3#fld4 sv2#area2#page1#enu3#fld5 sv2#area2#page1#enu3#fld6 sv2#area2#page1#enu3#fld7">
+      <Link id="sv2#area2#page1#enu3#ln5" name="Register as campaigner" to="sv2#miu1" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page1#enu3#ln5#par30" name="Key [oid_user]_birthdate" source="sv2#area2#page1#enu3#fld6" target="sv2#miu1.mov1#opm2#icu2#icp6"/>
+        <LinkParameter id="sv2#area2#page1#enu3#ln5#par31" name="User Object_name" source="sv2#area2#page1#enu3#fld5" target="sv2#miu1.mov1#opm2#icu2#icp5"/>
+        <LinkParameter id="sv2#area2#page1#enu3#ln5#par32" name="Key [oid_user]_password" source="sv2#area2#page1#enu3#fld4" target="sv2#miu1.mov1#opm2#icu2#icp4"/>
+        <LinkParameter id="sv2#area2#page1#enu3#ln5#par33" name="User Object_payment_information" source="sv2#area2#page1#enu3#fld7" target="sv2#miu1.mov1#opm2#icu2#icp7"/>
+        <LinkParameter id="sv2#area2#page1#enu3#ln5#par34" name="Key [oid_user]_username" source="sv2#area2#page1#enu3#fld3" target="sv2#miu1.mov1#opm2#icu2#icp3"/>
+      </Link>
+      <Link id="sv2#area2#page1#enu3#ln6" name="Register as supporter" to="sv2#miu2" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page1#enu3#ln6#par35" name="Key [oid_user]_birthdate" source="sv2#area2#page1#enu3#fld6" target="sv2#miu2.mov1#opm3#icu3#icp13"/>
+        <LinkParameter id="sv2#area2#page1#enu3#ln6#par36" name="User Object_name" source="sv2#area2#page1#enu3#fld5" target="sv2#miu2.mov1#opm3#icu3#icp12"/>
+        <LinkParameter id="sv2#area2#page1#enu3#ln6#par37" name="Key [oid_user]_password" source="sv2#area2#page1#enu3#fld4" target="sv2#miu2.mov1#opm3#icu3#icp11"/>
+        <LinkParameter id="sv2#area2#page1#enu3#ln6#par38" name="User Object_payment information" source="sv2#area2#page1#enu3#fld7" target="sv2#miu2.mov1#opm3#icu3#icp14"/>
+        <LinkParameter id="sv2#area2#page1#enu3#ln6#par39" name="Key [oid_user]_username" source="sv2#area2#page1#enu3#fld3" target="sv2#miu2.mov1#opm3#icu3#icp10"/>
+      </Link>
+      <Field id="sv2#area2#page1#enu3#fld3" name="Username" type="string" modifiable="true"/>
+      <Field id="sv2#area2#page1#enu3#fld6" name="Birthdate" type="date" modifiable="true"/>
+      <Field id="sv2#area2#page1#enu3#fld5" name="Name" type="string" modifiable="true"/>
+      <Field id="sv2#area2#page1#enu3#fld4" name="Password" type="password" modifiable="true"/>
+      <Field id="sv2#area2#page1#enu3#fld7" name="payment_information" type="string" modifiable="true"/>
+    </EntryUnit>
+    <EntryUnit gr:x="185" gr:y="0" id="sv2#area2#page1#enu5" name="Login" entity="User" linkOrder="sv2#area2#page1#enu5#ln8" gr:showAllParts="false" customDescriptor="false" fieldOrder="sv2#area2#page1#enu5#fld1 sv2#area2#page1#enu5#fld2">
+      <Link id="sv2#area2#page1#enu5#ln8" name="Log in" to="sv2#miu3" type="normal" validate="true" gr:bendpoints="686,-35,151,-300">
+        <LinkParameter id="sv2#area2#page1#enu5#ln8#par40" name="Key [oid_user]_password" source="sv2#area2#page1#enu5#fld2" target="sv2#miu3.mov1#opm1#icu1#icp2"/>
+        <LinkParameter id="sv2#area2#page1#enu5#ln8#par41" name="User Object_username" source="sv2#area2#page1#enu5#fld1" target="sv2#miu3.mov1#opm1#icu1#icp1"/>
+      </Link>
+      <Field id="sv2#area2#page1#enu5#fld1" name="Username" type="string" modifiable="true"/>
+      <Field id="sv2#area2#page1#enu5#fld2" name="Password" type="password" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page1#enu3">
+          <layout:Link link="sv2#area2#page1#enu3#ln5"/>
+          <layout:Link link="sv2#area2#page1#enu3#ln6"/>
+          <layout:Field field="sv2#area2#page1#enu3#fld3"/>
+          <layout:Field field="sv2#area2#page1#enu3#fld4"/>
+          <layout:Field field="sv2#area2#page1#enu3#fld5"/>
+          <layout:Field field="sv2#area2#page1#enu3#fld6"/>
+          <layout:Field field="sv2#area2#page1#enu3#fld7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page1#enu5">
+          <layout:Link link="sv2#area2#page1#enu5#ln8"/>
+          <layout:Field field="sv2#area2#page1#enu5#fld1"/>
+          <layout:Field field="sv2#area2#page1#enu5#fld2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,5 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-90" gr:y="485" id="sv4#area10" name="CreatContribution&amp;Tag" landmark="false" defaultPage="sv4#area10#page13">
+  <OperationUnits>
+    <SetUnit id="sv4#area10#stu3" name="SetCampaign" gr:x="25" gr:y="0" contextParameters="ctx1"/>
+  </OperationUnits>
+</Area>

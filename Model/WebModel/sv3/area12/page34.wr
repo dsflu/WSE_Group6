@@ -1,0 +1,39 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="285" gr:y="205" id="sv3#area12#page34" name="SearchResult">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area12#page34#pwu16" name="CampaignList" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att8 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13" linkOrder="sv3#area12#page34#pwu16#ln49">
+      <Selector id="sv3#area12#page34#pwu16#su25" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area12#page34#pwu16#su25#acond2" name="AttConditionTitle" predicate="contains" booleanOperator="or" implied="false" attributes="ent3#att8" ignoreCase="true"/>
+        <RelationshipRoleCondition id="sv3#area12#page34#pwu16#su25#rcond13" name="TagToCampaign" predicate="in" implied="false" role="rel4#role8"/>
+      </Selector>
+      <Link id="sv3#area12#page34#pwu16#ln49" name="SeeContribution" to="sv3#area12#page30#dau7" type="normal" validate="true">
+        <LinkParameter id="sv3#area12#page34#pwu16#ln49#par52" name="oid_campaign_KeyCondition1 [oid_campaign]" source="data[].ent3#att7" target="sv3#area12#page30#dau7#su22#kcond3.ent3#att7"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page34#pwu16">
+          <layout:Attribute attribute="ent3#att8"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Attribute attribute="ent3#att12"/>
+          <layout:Attribute attribute="ent3#att13"/>
+          <layout:Link link="sv3#area12#page34#pwu16#ln49"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,19 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="555" gr:y="30" id="mov1#opm7" name="Answer question">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm7#icu7" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm7#icu7#icp18" name="question"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp9" name="answer"/>
+      <OKLink id="mov1#opm7#icu7#oln5" name="OKFlow5" to="mov1#opm7#cru6">
+        <LinkParameter id="mov1#opm7#icu7#oln5#par22" name="answer_answer" source="mov1#opm7#icu7#icp9" target="mov1#opm7#cru6.ent5#att5"/>
+        <LinkParameter id="mov1#opm7#icu7#oln5#par126" name="question_Question.oid_question(AnswerToQuestion)" source="mov1#opm7#icu7#icp18" target="mov1#opm7#cru6.rel13#role26.ent6#att18"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp38" name="answeroid"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="410" gr:y="85" id="mov1#opm7#cru6" name="CreateAnswer" entity="ent5">
+      <OKLink id="mov1#opm7#cru6#oln10" name="OKFlow10" to="mov1#opm7#okcu1" automaticCoupling="true"/>
+      <KOLink id="mov1#opm7#cru6#kln12" name="KOFlow12" to="mov1#opm7#kocu6" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="665" gr:y="65" id="mov1#opm7#okcu1" name="OK Port Creat Answer"/>
+    <KOCollectorUnit gr:x="665" gr:y="145" id="mov1#opm7#kocu6" name="KO Port Creat answer"/>
+  </OperationUnits>
+</OperationModule>

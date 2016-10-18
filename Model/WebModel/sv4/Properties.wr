@@ -1,0 +1,32 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="CampaignerSite View" landmarks="sv4#area6 sv4#area8 sv4#area9 sv4#area11 sv4#lou3" homePage="sv4#area6#page7">
+  <OperationUnits>
+    <LogoutUnit gr:x="105" gr:y="305" id="sv4#lou3" name="Logout" siteView="sv2" landmark="true"/>
+    <ModuleInstanceUnit gr:x="310" gr:y="310" id="sv4#miu5" action="true" moduleId="mov1#opm4" name="Creat Campaign">
+      <KOLink id="sv4#miu5#kln8" name="KOFlow8" to="sv4#page12" automaticCoupling="true"/>
+      <OKLink id="sv4#miu5#oln27" name="OKFlow27" to="sv4#area10#page13#enu9" automaticCoupling="true"/>
+      <Link id="sv4#miu5#ln20" name="Flow26" to="sv4#area10#stu3" type="transport" validate="true">
+        <LinkParameter id="sv4#miu5#ln20#par70" name="OK Port Creat Campaign.Campaign_CampaigntxParam.oid_campaign" source="mov1#opm4#okcu3#ocp5" target="sv4#area10#stu3.ctx1.ent3#att7"/>
+      </Link>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="490" gr:y="735" id="sv4#miu6" action="true" name="Create Contribution" moduleId="mov1#opm5">
+      <KOLink id="sv4#miu6#kln9" name="KOFlow9" to="sv4#page12" automaticCoupling="true"/>
+      <OKLink id="sv4#miu6#oln29" name="OKFlow29" to="sv4#area10#page13#enu9" automaticCoupling="true" gr:bendpoints="-304,3,261,23"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="465" gr:y="1045" id="sv4#miu8" action="true" name="Creat Contribution-Finish" moduleId="mov1#opm5">
+      <KOLink id="sv4#miu8#kln11" name="KOFlow11" to="sv4#page12#mssu4" automaticCoupling="true"/>
+      <OKLink id="sv4#miu8#oln21" name="OKFlow21" to="sv4#area10#page2" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="455" gr:y="885" id="sv4#miu9" action="true" name="AnswerQuestion" moduleId="mov1#opm7">
+      <OKLink id="sv4#miu9#oln18" name="OKFlow18" to="sv4#area11#page14" automaticCoupling="true"/>
+      <KOLink id="sv4#miu9#kln16" name="KOFlow16" to="sv4#page12#mssu4" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="230" gr:y="1025" id="sv4#miu10" action="true" name="CreateTag" moduleId="mov1#opm8">
+      <KOLink id="sv4#miu10#kln18" name="KOFlow18" to="sv4#page12#mssu4" automaticCoupling="true"/>
+      <OKLink id="sv4#miu10#oln22" name="OKFlow22" to="sv4#area10#page2#enu1" automaticCoupling="true" gr:bendpoints="-45,-88,15,92"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="-90" gr:y="1020" id="sv4#miu11" action="true" name="FinishCreatingTag" moduleId="mov1#opm8">
+      <KOLink id="sv4#miu11#kln19" name="KOFlow19" to="sv4#page12" automaticCoupling="true"/>
+      <OKLink id="sv4#miu11#oln23" name="OKFlow23" to="sv4#area9#page11" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>

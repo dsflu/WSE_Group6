@@ -1,0 +1,47 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="585" gr:y="105" id="mov1#opm10" name="CheckContribution">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm10#icu10" gr:x="30" gr:y="60" linkOrder="mov1#opm10#icu10#ln62">
+      <InputCollectorParameter id="mov1#opm10#icu10#icp31" name="contribution"/>
+      <InputCollectorParameter id="mov1#opm10#icu10#icp30" name="supporter"/>
+      <OKLink id="mov1#opm10#icu10#oln36" name="OKFlow36" to="mov1#opm10#seu8">
+        <LinkParameter id="mov1#opm10#icu10#oln36#par111" name="supporter_SupporterToContribution [oid_user]" source="mov1#opm10#icu10#icp30" target="mov1#opm10#seu8#su31#rcond17.userOID"/>
+      </OKLink>
+      <Link id="mov1#opm10#icu10#ln62" name="Flow62" to="mov1#opm10#seu7" type="transport" validate="true">
+        <LinkParameter id="mov1#opm10#icu10#ln62#par112" name="contribution_KeyCondition15 [oid_contribution]" source="mov1#opm10#icu10#icp31" target="mov1#opm10#seu7#su30#kcond14.ent4#att14"/>
+      </Link>
+    </InputCollectorUnit>
+    <IsNotNullUnit id="mov1#opm10#inn1" name="Is con exists?" gr:x="660" gr:y="15">
+      <KOLink id="mov1#opm10#inn1#kln23" name="KOFlow18" to="mov1#opm10#kocu10" automaticCoupling="true"/>
+      <OKLink id="mov1#opm10#inn1#oln32" name="OKFlow21" to="mov1#opm10#okcu9" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <OKCollectorUnit id="mov1#opm10#okcu9" name="OK Port5" gr:x="925" gr:y="-80">
+      <OutputCollectorParameter id="mov1#opm10#okcu9#ocp7" name="testv"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm10#kocu10" name="KO Port6" gr:x="925" gr:y="30"/>
+    <SelectorUnit id="mov1#opm10#seu7" name="CheckIfCam_ConExists" gr:x="715" gr:y="170" entity="ent4">
+      <Selector id="mov1#opm10#seu7#su30" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm10#seu7#su30#rcond16" name="CampaignToContribution" predicate="in" implied="false" role="rel1#role1"/>
+        <KeyCondition id="mov1#opm10#seu7#su30#kcond14" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm10#seu7#oln33" name="OKFlow15" to="mov1#opm10#inn1">
+        <LinkParameter id="mov1#opm10#seu7#oln33#par108" name="oid_Input" source="ent4#att14Array" target="mov1#opm10#inn1.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#opm10#seu8" name="SelectSupporterContribution" gr:x="235" gr:y="200" entity="ent4">
+      <Selector id="mov1#opm10#seu8#su31" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm10#seu8#su31#rcond17" name="SupporterToContribution" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+      <OKLink id="mov1#opm10#seu8#oln34" name="OKFlow11" to="mov1#opm10#seu9">
+        <LinkParameter id="mov1#opm10#seu8#oln34#par113" name="oid_contribution_con_oid [oid_contribution]" source="ent4#att14Array" target="mov1#opm10#seu9#su32#kcond15.ent4#att14"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#opm10#seu9" name="SelectorCam" gr:x="525" gr:y="275" entity="ent4">
+      <OKLink id="mov1#opm10#seu9#oln35" name="OKFlow12" to="mov1#opm10#seu7">
+        <LinkParameter id="mov1#opm10#seu9#oln35#par46" name="ContributionToCampaign.oid_campaign_CampaignToContribution [oid_campaign]" source="rel1#role2_ent3#att7Array" target="mov1#opm10#seu7#su30#rcond16.ent3#att7"/>
+      </OKLink>
+      <Selector id="mov1#opm10#seu9#su32" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm10#seu9#su32#kcond15" name="con_oid" predicate="in" implied="false"/>
+      </Selector>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,70 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="510" gr:y="5" id="sv4#area9#page15" name="MyContributionPage">
+  <ContentUnits>
+    <PowerIndexUnit id="sv4#area9#page15#pwu9" name="ContributionList" gr:x="60" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att15 ent4#att16 ent4#att17">
+      <Selector id="sv4#area9#page15#pwu9#su9" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area9#page15#pwu9#su9#rcond7" name="CampaignToContribution" predicate="in" implied="false" role="rel1#role1"/>
+      </Selector>
+    </PowerIndexUnit>
+    <MultiMessageUnit gr:x="195" gr:y="145" id="sv4#area9#page15#mssu5" name="TagMessage"/>
+    <SelectorUnit gr:x="0" gr:y="130" id="sv4#area9#page15#seu3" name="Selector3" entity="ent7">
+      <Selector id="sv4#area9#page15#seu3#su21" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area9#page15#seu3#su21#rcond10" name="CampaignToTag" role="rel4#role7" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#area9#page15#seu3#ln26" name="Flow26" to="sv4#area9#page15#mssu5" type="transport" validate="true">
+        <LinkParameter id="sv4#area9#page15#seu3#ln26#par83" name="keyword_Shown Messages" source="ent7#att21Array" target="sv4#area9#page15#mssu5.shownMessages"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area9#page15#pwu9">
+          <layout:Attribute attribute="ent4#att15"/>
+          <layout:Attribute attribute="ent4#att16"/>
+          <layout:Attribute attribute="ent4#att17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area9#page15#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

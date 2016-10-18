@@ -1,0 +1,30 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="315" gr:y="25" id="mov1#opm4" name="Create campaign">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm4#icu4#icp19" name="expiration"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp17" name="goal"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp16" name="description"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp15" name="title"/>
+      <OKLink id="mov1#opm4#icu4#oln6" name="OKFlow6" to="mov1#opm4#cru3">
+        <LinkParameter id="mov1#opm4#icu4#oln6#par13" name="description_description" source="mov1#opm4#icu4#icp16" target="mov1#opm4#cru3.ent3#att9"/>
+        <LinkParameter id="mov1#opm4#icu4#oln6#par14" name="expiration_expiration" source="mov1#opm4#icu4#icp19" target="mov1#opm4#cru3.ent3#att11"/>
+        <LinkParameter id="mov1#opm4#icu4#oln6#par15" name="goal_goal" source="mov1#opm4#icu4#icp17" target="mov1#opm4#cru3.ent3#att10"/>
+        <LinkParameter id="mov1#opm4#icu4#oln6#par16" name="title_title" source="mov1#opm4#icu4#icp15" target="mov1#opm4#cru3.ent3#att8"/>
+        <LinkParameter id="mov1#opm4#icu4#oln6#par59" name="campaigner_Campaigner.oid_user(CampaignToCampaigner)" source="mov1#opm4#icu4#icp24" target="mov1#opm4#cru3.rel3#role6.userOID"/>
+        <LinkParameter id="mov1#opm4#icu4#oln6#par42" name="0_popularity" sourceValue="0" target="mov1#opm4#cru3.ent3#att12"/>
+        <LinkParameter id="mov1#opm4#icu4#oln6#par43" name="0_quality" sourceValue="0" target="mov1#opm4#cru3.ent3#att13"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp24" name="campaigner"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="340" gr:y="80" id="mov1#opm4#cru3" name="Create Campaign" entity="ent3">
+      <OKLink id="mov1#opm4#cru3#oln7" name="OKFlow7" to="mov1#opm4#okcu3">
+        <LinkParameter id="mov1#opm4#cru3#oln7#par73" name="oid_campaign_Campaign" source="ent3#att7Array" target="mov1#opm4#okcu3#ocp5"/>
+      </OKLink>
+      <KOLink id="mov1#opm4#cru3#kln7" name="KOFlow7" to="mov1#opm4#kocu4" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="575" gr:y="80" id="mov1#opm4#okcu3" name="OK Port Creat Campaign">
+      <OutputCollectorParameter id="mov1#opm4#okcu3#ocp5" name="Campaign"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="575" gr:y="165" id="mov1#opm4#kocu4" name="KO Port Creat Campaign"/>
+  </OperationUnits>
+</OperationModule>

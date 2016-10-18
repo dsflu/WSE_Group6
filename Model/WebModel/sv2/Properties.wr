@@ -1,0 +1,16 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Homepage" landmarks="sv2#area2" homePage="sv2#area2#page1">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="395" gr:y="120" id="sv2#miu1" action="true" name="CampaignerRegister" moduleId="mov1#opm2">
+      <KOLink id="sv2#miu1#kln2" name="KOFlow2" to="sv2#page26"/>
+      <OKLink id="sv2#miu1#oln14" name="OKFlow14" to="sv2#page25"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="435" gr:y="235" id="sv2#miu2" action="true" name="SupporterRegister" moduleId="mov1#opm3">
+      <KOLink id="sv2#miu2#kln3" name="KOFlow3" to="sv2#page3"/>
+      <OKLink id="sv2#miu2#oln15" name="OKFlow15" to="sv2#page33"/>
+      <KOLink id="sv2#miu2#kln32" name="KOFlow2" to="sv2#page31"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="825" gr:y="345" id="sv2#miu3" action="true" name="Login" moduleId="mov1#opm1">
+      <KOLink id="sv2#miu3#kln4" name="KOFlow4" to="sv2#page3"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>

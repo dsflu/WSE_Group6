@@ -1,0 +1,36 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area1#page29" name="conList" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <GetUnit id="sv3#area1#page29#gtu14" name="getSup" gr:x="0" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="sv3#area1#page29#gtu14#ln15" name="Flow25" to="sv3#area1#page29#pwu1" type="transport" validate="true">
+        <LinkParameter id="sv3#area1#page29#gtu14#ln15#par96" name="UserCtxParam.oid_user_Contributions from 1 sup [oid_user]" source="sv3#area1#page29#gtu14.UserCtxParam" target="sv3#area1#page29#pwu1#su4#rcond3.userOID"/>
+      </Link>
+    </GetUnit>
+    <PowerIndexUnit id="sv3#area1#page29#pwu1" name="ContributionList" gr:x="140" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att15 ent4#att16 ent4#att17">
+      <Selector id="sv3#area1#page29#pwu1#su4" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area1#page29#pwu1#su4#rcond3" name="Contributions from 1 sup" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area1#page29#pwu1">
+          <layout:Attribute attribute="ent4#att15"/>
+          <layout:Attribute attribute="ent4#att16"/>
+          <layout:Attribute attribute="ent4#att17"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

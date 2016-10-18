@@ -1,0 +1,65 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="220" gr:y="0" id="sv4#area10#page13" name="CreatContributionPage">
+  <ContentUnits>
+    <GetUnit gr:x="285" gr:y="0" id="sv4#area10#page13#gtu5" name="GetCampaign" contextParameters="ctx1">
+      <Link id="sv4#area10#page13#gtu5#ln25" name="Flow25" to="sv4#miu6" type="transport" validate="true">
+        <LinkParameter id="sv4#area10#page13#gtu5#ln25#par72" name="CampaigntxParam.oid_campaign_campaign" source="sv4#area10#page13#gtu5.ctx1.ent3#att7" target="sv4#miu6.mov1#opm5#icu5#icp25"/>
+      </Link>
+      <Link id="sv4#area10#page13#gtu5#ln30" name="Flow30" to="sv4#miu8" type="transport" validate="true">
+        <LinkParameter id="sv4#area10#page13#gtu5#ln30#par81" name="CampaigntxParam.oid_campaign_campaign" source="sv4#area10#page13#gtu5.ctx1.ent3#att7" target="sv4#miu8.mov1#opm5#icu5#icp25"/>
+      </Link>
+    </GetUnit>
+    <EntryUnit gr:x="0" gr:y="70" id="sv4#area10#page13#enu9" name="CreatContribution" linkOrder="sv4#area10#page13#enu9#ln28 sv4#area10#page13#enu9#ln29" fieldOrder="sv4#area10#page13#enu9#fld14 sv4#area10#page13#enu9#fld15 sv4#area10#page13#enu9#fld16">
+      <Field id="sv4#area10#page13#enu9#fld14" name="title" type="string" modifiable="true"/>
+      <Field id="sv4#area10#page13#enu9#fld15" name="amount" type="integer" modifiable="true"/>
+      <Field id="sv4#area10#page13#enu9#fld16" name="description" type="text" modifiable="true"/>
+      <Link id="sv4#area10#page13#enu9#ln28" name="CreatAnotherContribution" to="sv4#miu6" type="normal" validate="true">
+        <LinkParameter id="sv4#area10#page13#enu9#ln28#par75" name="amount_amount" source="sv4#area10#page13#enu9#fld15" target="sv4#miu6.mov1#opm5#icu5#icp22"/>
+        <LinkParameter id="sv4#area10#page13#enu9#ln28#par76" name="description_description" source="sv4#area10#page13#enu9#fld16" target="sv4#miu6.mov1#opm5#icu5#icp21"/>
+        <LinkParameter id="sv4#area10#page13#enu9#ln28#par77" name="title_title" source="sv4#area10#page13#enu9#fld14" target="sv4#miu6.mov1#opm5#icu5#icp20"/>
+      </Link>
+      <Link id="sv4#area10#page13#enu9#ln29" name="FinishCreatingContribution" to="sv4#miu8" type="normal" validate="true">
+        <LinkParameter id="sv4#area10#page13#enu9#ln29#par78" name="amount_amount" source="sv4#area10#page13#enu9#fld15" target="sv4#miu8.mov1#opm5#icu5#icp22"/>
+        <LinkParameter id="sv4#area10#page13#enu9#ln29#par79" name="description_description" source="sv4#area10#page13#enu9#fld16" target="sv4#miu8.mov1#opm5#icu5#icp21"/>
+        <LinkParameter id="sv4#area10#page13#enu9#ln29#par80" name="title_title" source="sv4#area10#page13#enu9#fld14" target="sv4#miu8.mov1#opm5#icu5#icp20"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area10#page13#enu9">
+          <layout:Field field="sv4#area10#page13#enu9#fld14"/>
+          <layout:Field field="sv4#area10#page13#enu9#fld15"/>
+          <layout:Field field="sv4#area10#page13#enu9#fld16"/>
+          <layout:Link link="sv4#area10#page13#enu9#ln28"/>
+          <layout:Link link="sv4#area10#page13#enu9#ln29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

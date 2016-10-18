@@ -1,0 +1,22 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="310" gr:y="100" id="mov1#opm5" name="Create contribution">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm5#icu5" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm5#icu5#icp22" name="amount"/>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp21" name="description"/>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp20" name="title"/>
+      <OKLink id="mov1#opm5#icu5#oln8" name="OKFlow8" to="mov1#opm5#cru4">
+        <LinkParameter id="mov1#opm5#icu5#oln8#par17" name="amount_amount" source="mov1#opm5#icu5#icp22" target="mov1#opm5#cru4.ent4#att17"/>
+        <LinkParameter id="mov1#opm5#icu5#oln8#par18" name="description_description" source="mov1#opm5#icu5#icp21" target="mov1#opm5#cru4.ent4#att16"/>
+        <LinkParameter id="mov1#opm5#icu5#oln8#par19" name="title_title" source="mov1#opm5#icu5#icp20" target="mov1#opm5#cru4.ent4#att15"/>
+        <LinkParameter id="mov1#opm5#icu5#oln8#par65" name="campaign_Campaign.oid_campaign(ContributionToCampaign)" target="mov1#opm5#cru4.rel1#role2.ent3#att7" source="mov1#opm5#icu5#icp25"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp25" name="campaign"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="305" gr:y="90" id="mov1#opm5#cru4" name="CreateContribution" entity="ent4">
+      <OKLink id="mov1#opm5#cru4#oln9" name="OKFlow9" to="mov1#opm5#okcu4" automaticCoupling="true"/>
+      <KOLink id="mov1#opm5#cru4#kln10" name="KOFlow10" to="mov1#opm5#kocu5" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="580" gr:y="80" id="mov1#opm5#okcu4" name="OK Port Creat Contribution"/>
+    <KOCollectorUnit gr:x="580" gr:y="170" id="mov1#opm5#kocu5" name="KO Port Creat Contribution"/>
+  </OperationUnits>
+</OperationModule>

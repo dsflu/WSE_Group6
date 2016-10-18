@@ -1,0 +1,23 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="305" gr:y="245" id="mov1#opm9" name="SearchCampaign">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm9#icu9" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm9#icu9#icp29" name="keyword"/>
+      <OKLink id="mov1#opm9#icu9#oln28" name="OKFlow28" to="mov1#opm9#seu2">
+        <LinkParameter id="mov1#opm9#icu9#oln28#par74" name="tag_AttConditionKeyword" source="mov1#opm9#icu9#icp29" target="mov1#opm9#seu2#su8#acond1"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <SelectorUnit gr:x="305" gr:y="60" id="mov1#opm9#seu2" name="SelectorTag" entity="ent7">
+      <Selector id="mov1#opm9#seu2#su8" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#opm9#seu2#su8#acond1" name="AttConditionKeyword" predicate="eq" booleanOperator="or" implied="false" attributes="ent7#att21"/>
+      </Selector>
+      <OKLink id="mov1#opm9#seu2#oln24" name="OKFlow24" to="mov1#opm9#okcu8">
+        <LinkParameter id="mov1#opm9#seu2#oln24#par29" name="TagToCampaign.oid_campaign_campaign" source="ent7#att20Array" target="mov1#opm9#okcu8#ocp6"/>
+      </OKLink>
+      <KOLink id="mov1#opm9#seu2#kln20" name="KOFlow20" to="mov1#opm9#kocu9" automaticCoupling="true"/>
+    </SelectorUnit>
+    <OKCollectorUnit gr:x="480" gr:y="65" id="mov1#opm9#okcu8" name="OK Port Search Tag">
+      <OutputCollectorParameter id="mov1#opm9#okcu8#ocp6" name="campaign"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="480" gr:y="150" id="mov1#opm9#kocu9" name="KO Port Search Tag"/>
+  </OperationUnits>
+</OperationModule>

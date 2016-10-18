@@ -1,0 +1,67 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv4#area11#page14" name="AnswerQuestion">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="225" gr:y="0" id="sv4#area11#page14#pwu7" name="CampaignList" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att8 ent3#att9" linkOrder="sv4#area11#page14#pwu7#ln36">
+      <Selector id="sv4#area11#page14#pwu7#su7" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area11#page14#pwu7#su7#rcond5" name="CampaignerToCampaign" predicate="in" implied="false" role="rel3#role5"/>
+      </Selector>
+      <Link id="sv4#area11#page14#pwu7#ln36" name="SeeQuestion" to="sv4#area11#page16#pwu10" type="normal" validate="true">
+        <LinkParameter id="sv4#area11#page14#pwu7#ln36#par86" name="oid_campaign_CampaignToQuestion [oid_campaign]" source="data[].ent3#att7" target="sv4#area11#page16#pwu10#su10#rcond8.ent3#att7"/>
+      </Link>
+    </PowerIndexUnit>
+    <GetUnit gr:x="0" gr:y="10" id="sv4#area11#page14#gtu8" name="GetCampaigner" contextParameters="UserCtxParam">
+      <Link id="sv4#area11#page14#gtu8#ln24" name="Flow24" to="sv4#area11#page14#pwu7" type="transport" validate="true">
+        <LinkParameter id="sv4#area11#page14#gtu8#ln24#par69" name="UserCtxParam.oid_user_CampaignerToCampaign [oid_user]" source="sv4#area11#page14#gtu8.UserCtxParam" target="sv4#area11#page14#pwu7#su7#rcond5.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area11#page14#pwu7">
+          <layout:Attribute attribute="ent3#att8"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Link link="sv4#area11#page14#pwu7#ln36"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

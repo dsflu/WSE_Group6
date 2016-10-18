@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="320" gr:y="175" id="mov1#opm6" name="Ask question">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm6#icu6" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm6#icu6#icp8" name="question"/>
+      <OKLink id="mov1#opm6#icu6#oln3" name="OKFlow3" to="mov1#opm6#cru5">
+        <LinkParameter id="mov1#opm6#icu6#oln3#par21" name="question_question" source="mov1#opm6#icu6#icp8" target="mov1#opm6#cru5.ent6#att19"/>
+        <LinkParameter id="mov1#opm6#icu6#oln3#par62" name="campaign_Campaign.oid_campaign(QuestionToCampaign)" source="mov1#opm6#icu6#icp23" target="mov1#opm6#cru5.rel7#role14.ent3#att7"/>
+        <LinkParameter id="mov1#opm6#icu6#oln3#par63" name="supporter_Suppporter.oid_user(QuestionToSuppporter)" source="mov1#opm6#icu6#icp26" target="mov1#opm6#cru5.rel6#role11.userOID"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp23" name="campaign"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp26" name="supporter"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="290" gr:y="55" id="mov1#opm6#cru5" name="CreateQuestion" entity="ent6">
+      <KOLink id="mov1#opm6#cru5#kln13" name="KOFlow13" to="mov1#opm6#kocu7" automaticCoupling="true"/>
+      <OKLink id="mov1#opm6#cru5#oln11" name="OKFlow11" to="mov1#opm6#okcu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <KOCollectorUnit gr:x="470" gr:y="135" id="mov1#opm6#kocu7" name="KO Port Create Question"/>
+    <OKCollectorUnit gr:x="470" gr:y="35" id="mov1#opm6#okcu2" name="OK Port Create Question"/>
+  </OperationUnits>
+</OperationModule>

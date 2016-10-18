@@ -1,0 +1,36 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="340" gr:y="420" id="sv3#area12#page35" name="ContributionDetails">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#area12#page35#dau8" name="ContributionDetails" entity="ent4" displayAttributes="ent4#att15 ent4#att16 ent4#att17" linkOrder="sv3#area12#page35#dau8#ln63">
+      <Selector id="sv3#area12#page35#dau8#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area12#page35#dau8#su26#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area12#page35#dau8#ln52" name="Flow52" to="sv3#area12#stu5" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page35#dau8#ln52#par100" name="oid_contribution_ContributiontxParam.oid_contribution" source="data.ent4#att14" target="sv3#area12#stu5.ctx2.ent4#att14"/>
+      </Link>
+      <Link id="sv3#area12#page35#dau8#ln63" name="GoOn" to="sv3#miu14" automaticCoupling="true" type="normal" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page35#dau8">
+          <layout:Attribute attribute="ent4#att15"/>
+          <layout:Attribute attribute="ent4#att16"/>
+          <layout:Attribute attribute="ent4#att17"/>
+          <layout:Link link="sv3#area12#page35#dau8#ln63"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

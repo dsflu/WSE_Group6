@@ -1,0 +1,45 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="530" gr:y="15" id="sv4#area11#page16" name="QuestionList">
+  <ContentUnits>
+    <PowerIndexUnit id="sv4#area11#page16#pwu10" name="QuestionList" gr:x="5" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att19" linkOrder="sv4#area11#page16#pwu10#ln76">
+      <Selector id="sv4#area11#page16#pwu10#su10" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area11#page16#pwu10#su10#rcond8" name="CampaignToQuestion" predicate="in" implied="false" role="rel7#role13"/>
+      </Selector>
+      <Link id="sv4#area11#page16#pwu10#ln76" name="Details" to="sv4#area11#page22#dau6" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area11#page16#pwu10">
+          <layout:Attribute attribute="ent6#att19"/>
+          <layout:Link link="sv4#area11#page16#pwu10#ln76"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

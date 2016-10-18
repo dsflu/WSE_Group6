@@ -1,0 +1,48 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="40" gr:y="105" id="mov1#opm2" name="CampaignerRegister">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm2#icu2" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm2#icu2#icp7" name="payment_information"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp6" name="birthdate"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp5" name="name"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp4" name="password"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp3" name="username"/>
+      <OKLink id="mov1#opm2#icu2#oln30" name="OKFlow30" to="mov1#opm2#seu10">
+        <LinkParameter id="mov1#opm2#icu2#oln30#par4" name="username_camer_name" source="mov1#opm2#icu2#icp3" target="mov1#opm2#seu10#su5#acond3"/>
+      </OKLink>
+      <Link id="mov1#opm2#icu2#ln11" name="Flow11" to="mov1#opm2#cru1" type="transport" validate="true">
+        <LinkParameter id="mov1#opm2#icu2#ln11#par123" name="birthdate_birthdate" source="mov1#opm2#icu2#icp6" target="mov1#opm2#cru1.User#att1"/>
+        <LinkParameter id="mov1#opm2#icu2#ln11#par130" name="name_name" source="mov1#opm2#icu2#icp5" target="mov1#opm2#cru1.email"/>
+        <LinkParameter id="mov1#opm2#icu2#ln11#par133" name="password_password" source="mov1#opm2#icu2#icp4" target="mov1#opm2#cru1.password"/>
+        <LinkParameter id="mov1#opm2#icu2#ln11#par134" name="payment_information_payment_information" source="mov1#opm2#icu2#icp7" target="mov1#opm2#cru1.User#att2"/>
+        <LinkParameter id="mov1#opm2#icu2#ln11#par135" name="username_userName" source="mov1#opm2#icu2#icp3" target="mov1#opm2#cru1.userName"/>
+        <LinkParameter id="mov1#opm2#icu2#ln11#par3" name="1_Group.oid_group(defaultGroup)" sourceValue="1" target="mov1#opm2#cru1.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm2#icu2#ln11#par8" name="1_Group.oid_group(groups)" sourceValue="1" target="mov1#opm2#cru1.User2Group.groupOID"/>
+        <LinkParameter id="mov1#opm2#icu2#ln11#par9" name="0_reputation" sourceValue="0" target="mov1#opm2#cru1.ent1#att4"/>
+      </Link>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="520" gr:y="60" id="mov1#opm2#cru1" name="CampaignerRegister" bulk="false" entity="ent1">
+      <KOLink id="mov1#opm2#cru1#kln5" name="KOFlow5" to="mov1#opm2#kocu2" automaticCoupling="true"/>
+      <OKLink id="mov1#opm2#cru1#oln16" name="OKFlow16" to="mov1#opm2#okcu5">
+        <LinkParameter id="mov1#opm2#cru1#oln16#par48" name="password_password" source="passwordArray" target="mov1#opm2#okcu5#ocp2"/>
+        <LinkParameter id="mov1#opm2#cru1#oln16#par49" name="userName_username" source="userNameArray" target="mov1#opm2#okcu5#ocp1"/>
+      </OKLink>
+    </CreateUnit>
+    <KOCollectorUnit gr:x="850" gr:y="185" id="mov1#opm2#kocu2" name="KO Port Register C"/>
+    <OKCollectorUnit gr:x="850" gr:y="80" id="mov1#opm2#okcu5" name="OK Port Register C">
+      <OutputCollectorParameter id="mov1#opm2#okcu5#ocp2" name="password"/>
+      <OutputCollectorParameter id="mov1#opm2#okcu5#ocp1" name="username"/>
+    </OKCollectorUnit>
+    <IsNotNullUnit gr:x="525" gr:y="195" id="mov1#opm2#inn2" name="Is Not Null">
+      <KOLink id="mov1#opm2#inn2#kln29" name="KOFlow29" to="mov1#opm2#cru1" automaticCoupling="true"/>
+      <OKLink id="mov1#opm2#inn2#oln45" name="OKFlow45" to="mov1#opm2#kocu2" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <SelectorUnit gr:x="315" gr:y="230" id="mov1#opm2#seu10" name="SelectCampaigner" entity="ent1">
+      <Selector id="mov1#opm2#seu10#su5" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#opm2#seu10#su5#acond3" name="camer_name" predicate="eq" booleanOperator="or" implied="false" attributes="userName"/>
+      </Selector>
+      <OKLink id="mov1#opm2#seu10#oln2" name="OKFlow2" to="mov1#opm2#inn2">
+        <LinkParameter id="mov1#opm2#seu10#oln2#par5" name="oid_user_Input" source="userOIDArray" target="mov1#opm2#inn2.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>
