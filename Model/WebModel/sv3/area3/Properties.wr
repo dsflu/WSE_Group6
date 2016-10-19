@@ -1,5 +1,9 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="380" gr:y="45" id="sv3#area3" name="ListCampaigns" landmark="true" defaultPage="sv3#area3#page4">
   <OperationUnits>
     <SetUnit gr:x="220" gr:y="220" id="sv3#area3#stu4" name="SetCampaign" contextParameters="ctx1"/>
+    <ModuleInstanceUnit gr:x="15" gr:y="195" id="sv3#area3#miu17" action="true" name="Vote" moduleId="mov1#opm12">
+      <KOLink id="sv3#area3#miu17#kln33" name="KOFlow33" to="sv3#page8#mssu2" automaticCoupling="true"/>
+      <OKLink id="sv3#area3#miu17#oln50" name="OKFlow50" to="sv3#area3#page4#pwu2" automaticCoupling="true" gr:bendpoints="-18,-65,-13,70"/>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </Area>

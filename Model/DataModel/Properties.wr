@@ -143,6 +143,5 @@
       <db:JoinColumn attribute="ent7#att20" name="oid_tag"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="web1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/webratio_group6" username="postgres" cryptedPassword="true" password="c3Rhcmlkb2w1MTYxMjc=" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="web1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/webratio_group6" username="postgres" cryptedPassword="true" password="c3Rhcmlkb2w1MTYxMjc=" schema="public"/>
 </DataModel>
