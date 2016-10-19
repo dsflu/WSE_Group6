@@ -1,0 +1,38 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="200" gr:y="355" id="mov1#opm12" name="Vote">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm12#icu12" gr:x="30" gr:y="60" linkOrder="mov1#opm12#icu12#ln37">
+      <InputCollectorParameter id="mov1#opm12#icu12#icp32" name="cam_id"/>
+      <OKLink id="mov1#opm12#icu12#oln38" name="OKFlow38" to="mov1#opm12#seu12">
+        <LinkParameter id="mov1#opm12#icu12#oln38#par45" name="cam_id_cam_id [oid_campaign]" source="mov1#opm12#icu12#icp32" target="mov1#opm12#seu12#su24#kcond7.ent3#att7"/>
+      </OKLink>
+      <Link id="mov1#opm12#icu12#ln37" name="Flow37" to="mov1#opm12#mfu2" type="transport" validate="true">
+        <LinkParameter id="mov1#opm12#icu12#ln37#par109" name="cam_id_KeyCondition9 [oid_campaign]" source="mov1#opm12#icu12#icp32" target="mov1#opm12#mfu2#su36#kcond9.ent3#att7"/>
+      </Link>
+    </InputCollectorUnit>
+    <SelectorUnit gr:x="275" gr:y="80" id="mov1#opm12#seu12" name="SelectCam" entity="ent3">
+      <Selector id="mov1#opm12#seu12#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm12#seu12#su24#kcond7" name="cam_id" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm12#seu12#oln47" name="OKFlow47" to="mov1#opm12#mathu2">
+        <LinkParameter id="mov1#opm12#seu12#oln47#par88" name="quality_Operand3" source="ent3#att13Array" target="mov1#opm12#mathu2#mathv3"/>
+        <LinkParameter id="mov1#opm12#seu12#oln47#par97" name="1_Operand4" sourceValue="1" target="mov1#opm12#mathu2#mathv4"/>
+      </OKLink>
+    </SelectorUnit>
+    <MathUnit gr:x="415" gr:y="70" id="mov1#opm12#mathu2" name="Math2" resultType="float" defaultExpression="Operand3+Operand4">
+      <MathVariable id="mov1#opm12#mathu2#mathv3" name="Operand3"/>
+      <MathVariable id="mov1#opm12#mathu2#mathv4" name="Operand4"/>
+      <OKLink id="mov1#opm12#mathu2#oln48" name="OKFlow48" to="mov1#opm12#mfu2">
+        <LinkParameter id="mov1#opm12#mathu2#oln48#par110" name="Result_quality" source="result" target="mov1#opm12#mfu2.ent3#att13"/>
+      </OKLink>
+    </MathUnit>
+    <ModifyUnit gr:x="485" gr:y="300" id="mov1#opm12#mfu2" name="Update2" entity="ent3">
+      <Selector id="mov1#opm12#mfu2#su36" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm12#mfu2#su36#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov1#opm12#mfu2#kln30" name="KOFlow30" to="mov1#opm12#kocu13" automaticCoupling="true"/>
+      <OKLink id="mov1#opm12#mfu2#oln49" name="OKFlow49" to="mov1#opm12#okcu12" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="610" gr:y="95" id="mov1#opm12#okcu12" name="OK Port12"/>
+    <KOCollectorUnit gr:x="635" gr:y="345" id="mov1#opm12#kocu13" name="KO Port13"/>
+  </OperationUnits>
+</OperationModule>
