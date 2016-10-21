@@ -1,122 +1,151 @@
-[21 Oct 2016 10:29:32] Building database metadata model
-[21 Oct 2016 10:29:32] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@1d3c468a, includeTables=true, username=postgres, outputLogPath=/Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/DB.xml.log, readIndexes=null, driverClass=org.postgresql.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.PostgreSQLMetaDataProvider, outputPath=/Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=/Users/fredlu/Documents/Webratio_workspace/.metadata/.plugins/com.webratio.commons.db/derby, url=jdbc:postgresql://localhost:5432/webratio_group6, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=50916}
-[21 Oct 2016 10:29:32] URL: jdbc:postgresql://localhost:5432/webratio_group6
-[21 Oct 2016 10:29:32] Product name: PostgreSQL
-[21 Oct 2016 10:29:32] Product version: 9.6.0
-[21 Oct 2016 10:29:32] Driver name: PostgreSQL Native Driver
-[21 Oct 2016 10:29:32] Driver version: PostgreSQL 9.3 JDBC3g (build 1103)
-[21 Oct 2016 10:29:32] Driver major version: 9
-[21 Oct 2016 10:29:32] Driver minor version: 3
-[21 Oct 2016 10:29:32] Identifier quote string: 3
-[21 Oct 2016 10:29:32] Retrieving schemas
-[21 Oct 2016 10:29:32]   Found schema: information_schema
-[21 Oct 2016 10:29:32]   Found schema: pg_catalog
-[21 Oct 2016 10:29:32]   Found schema: public
-[21 Oct 2016 10:29:32] Retrieving sequences
-[21 Oct 2016 10:29:32] Retrieving [TABLE, VIEW, SYNONYM] for schema 'information_schema'
-[21 Oct 2016 10:29:32] Retrieving [TABLE, VIEW, SYNONYM] for schema 'pg_catalog'
-[21 Oct 2016 10:29:32] Retrieving [TABLE, VIEW, SYNONYM] for schema 'public'
-[21 Oct 2016 10:29:32]   Found 'public.answer' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.campaign' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.campaigner' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.contribution' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.group' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.group_module' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.module' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.question' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.suppporter' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.suppporter_contribution' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.tag' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.user' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found 'public.user_group' [type = TABLE]
-[21 Oct 2016 10:29:32] Retrieving columns for 'public.answer' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found column: oid_answer [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: answer [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: question_oid_question [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32] Retrieving primary keys for 'public.answer' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found primary key column: oid_answer
-[21 Oct 2016 10:29:32] Retrieving columns for 'public.campaign' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found column: oid_campaign [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: title [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: quality [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: popularity [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: expiration [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
-[21 Oct 2016 10:29:32]   Found column: goal [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: description [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: campaigner_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: time [type = bool][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
-[21 Oct 2016 10:29:32] Retrieving primary keys for 'public.campaign' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found primary key column: oid_campaign
-[21 Oct 2016 10:29:32] Retrieving columns for 'public.campaigner' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: reputation [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32] Retrieving primary keys for 'public.campaigner' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found primary key column: user_oid_user
-[21 Oct 2016 10:29:32] Retrieving columns for 'public.contribution' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found column: oid_contribution [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: amount [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: description [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: title [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: campaign_oid_campaign [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32] Retrieving primary keys for 'public.contribution' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found primary key column: oid_contribution
-[21 Oct 2016 10:29:32] Retrieving columns for 'public.group' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found column: oid_group [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: groupname [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: module_oid_module [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32] Retrieving primary keys for 'public.group' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found primary key column: oid_group
-[21 Oct 2016 10:29:32] Retrieving columns for 'public.group_module' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found column: group_oid_group [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: module_oid_module [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32] Retrieving primary keys for 'public.group_module' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found primary key column: group_oid_group
-[21 Oct 2016 10:29:32]   Found primary key column: module_oid_module
-[21 Oct 2016 10:29:32] Retrieving columns for 'public.module' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found column: oid_module [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: moduleid [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: modulename [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[21 Oct 2016 10:29:32] Retrieving primary keys for 'public.module' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found primary key column: oid_module
-[21 Oct 2016 10:29:32] Retrieving columns for 'public.question' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found column: oid_question [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: question [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: suppporter_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: campaign_oid_campaign [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32] Retrieving primary keys for 'public.question' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found primary key column: oid_question
-[21 Oct 2016 10:29:32] Retrieving columns for 'public.suppporter' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32]   Found column: wisdom [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:32] Retrieving primary keys for 'public.suppporter' [type = TABLE]
-[21 Oct 2016 10:29:32]   Found primary key column: user_oid_user
-[21 Oct 2016 10:29:33] Retrieving columns for 'public.suppporter_contribution' [type = TABLE]
-[21 Oct 2016 10:29:33]   Found column: suppporter_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:33]   Found column: contribution_oid_contribution [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:33] Retrieving primary keys for 'public.suppporter_contribution' [type = TABLE]
-[21 Oct 2016 10:29:33]   Found primary key column: suppporter_oid_user
-[21 Oct 2016 10:29:33]   Found primary key column: contribution_oid_contribution
-[21 Oct 2016 10:29:33] Retrieving columns for 'public.tag' [type = TABLE]
-[21 Oct 2016 10:29:33]   Found column: oid_tag [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:33]   Found column: keyword [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[21 Oct 2016 10:29:33]   Found column: campaign_oid_campaign [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:33] Retrieving primary keys for 'public.tag' [type = TABLE]
-[21 Oct 2016 10:29:33]   Found primary key column: oid_tag
-[21 Oct 2016 10:29:33] Retrieving columns for 'public.user' [type = TABLE]
-[21 Oct 2016 10:29:33]   Found column: oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:33]   Found column: username [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[21 Oct 2016 10:29:33]   Found column: password [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[21 Oct 2016 10:29:33]   Found column: name [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[21 Oct 2016 10:29:33]   Found column: payment_information [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[21 Oct 2016 10:29:33]   Found column: birthdate [type = date][SQL/XOPEN type = 91][size = 13][dec. digits = 0]
-[21 Oct 2016 10:29:33]   Found column: group_oid_group [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:33] Retrieving primary keys for 'public.user' [type = TABLE]
-[21 Oct 2016 10:29:33]   Found primary key column: oid_user
-[21 Oct 2016 10:29:33] Retrieving columns for 'public.user_group' [type = TABLE]
-[21 Oct 2016 10:29:33]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:33]   Found column: group_oid_group [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[21 Oct 2016 10:29:33] Retrieving primary keys for 'public.user_group' [type = TABLE]
-[21 Oct 2016 10:29:33]   Found primary key column: user_oid_user
-[21 Oct 2016 10:29:33]   Found primary key column: group_oid_group
-[21 Oct 2016 10:29:33] Database metadata retrieved (149 ms)
-[21 Oct 2016 10:29:33] Database connection closed
+[21 Oct 2016 12:49:00] Building database metadata model
+[21 Oct 2016 12:49:00] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@5e7808b9, includeTables=true, username=postgres, outputLogPath=/Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/DB.xml.log, readIndexes=null, driverClass=org.postgresql.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.PostgreSQLMetaDataProvider, outputPath=/Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=/Users/fredlu/Documents/Webratio_workspace/.metadata/.plugins/com.webratio.commons.db/derby, url=jdbc:postgresql://localhost:5432/webratio_group6, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=true, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=64135}
+[21 Oct 2016 12:49:00] URL: jdbc:postgresql://localhost:5432/webratio_group6
+[21 Oct 2016 12:49:00] Product name: PostgreSQL
+[21 Oct 2016 12:49:00] Product version: 9.6.0
+[21 Oct 2016 12:49:00] Driver name: PostgreSQL Native Driver
+[21 Oct 2016 12:49:00] Driver version: PostgreSQL 9.3 JDBC3g (build 1103)
+[21 Oct 2016 12:49:00] Driver major version: 9
+[21 Oct 2016 12:49:00] Driver minor version: 3
+[21 Oct 2016 12:49:00] Identifier quote string: 3
+[21 Oct 2016 12:49:00] Retrieving schemas
+[21 Oct 2016 12:49:00]   Found schema: information_schema
+[21 Oct 2016 12:49:00]   Found schema: pg_catalog
+[21 Oct 2016 12:49:00]   Found schema: public
+[21 Oct 2016 12:49:00] Retrieving sequences
+[21 Oct 2016 12:49:00] Retrieving [TABLE, VIEW, SYNONYM] for schema 'information_schema'
+[21 Oct 2016 12:49:00] Retrieving [TABLE, VIEW, SYNONYM] for schema 'pg_catalog'
+[21 Oct 2016 12:49:00] Retrieving [TABLE, VIEW, SYNONYM] for schema 'public'
+[21 Oct 2016 12:49:00]   Found 'public.answer' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.campaign' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.campaigner' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.contribution' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.group' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.group_module' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.module' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.question' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.suppporter' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.suppporter_contribution' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.tag' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.user' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found 'public.user_group' [type = TABLE]
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.answer' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: oid_answer [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: answer [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: question_oid_question [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.answer' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: oid_answer
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.campaign' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: oid_campaign [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: title [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: quality [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: popularity [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: expiration [type = timestamp][SQL/XOPEN type = 93][size = 29][dec. digits = 6]
+[21 Oct 2016 12:49:00]   Found column: goal [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: description [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: campaigner_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: time [type = bool][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.campaign' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: oid_campaign
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.campaigner' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: reputation [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.campaigner' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: user_oid_user
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.contribution' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: oid_contribution [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: amount [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: description [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: title [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: campaign_oid_campaign [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.contribution' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: oid_contribution
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.group' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: oid_group [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: groupname [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: module_oid_module [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.group' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: oid_group
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.group_module' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: group_oid_group [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: module_oid_module [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.group_module' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: group_oid_group
+[21 Oct 2016 12:49:00]   Found primary key column: module_oid_module
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.module' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: oid_module [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: moduleid [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: modulename [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.module' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: oid_module
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.question' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: oid_question [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: question [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: suppporter_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: campaign_oid_campaign [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.question' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: oid_question
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.suppporter' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: wisdom [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.suppporter' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: user_oid_user
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.suppporter_contribution' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: suppporter_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: contribution_oid_contribution [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.suppporter_contribution' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: suppporter_oid_user
+[21 Oct 2016 12:49:00]   Found primary key column: contribution_oid_contribution
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.tag' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: oid_tag [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: keyword [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: campaign_oid_campaign [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.tag' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: oid_tag
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.user' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: username [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: password [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: name [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: payment_information [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: birthdate [type = date][SQL/XOPEN type = 91][size = 13][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: group_oid_group [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.user' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: oid_user
+[21 Oct 2016 12:49:00] Retrieving columns for 'public.user_group' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found column: user_oid_user [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00]   Found column: group_oid_group [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 Oct 2016 12:49:00] Retrieving primary keys for 'public.user_group' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found primary key column: user_oid_user
+[21 Oct 2016 12:49:00]   Found primary key column: group_oid_group
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.answer' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column question_oid_question references question(oid_question)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.campaign' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column campaigner_oid_user references campaigner(user_oid_user)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.campaigner' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column user_oid_user references user(oid_user)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.contribution' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column campaign_oid_campaign references campaign(oid_campaign)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.group' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column module_oid_module references module(oid_module)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.group_module' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column group_oid_group references group(oid_group)
+[21 Oct 2016 12:49:00]   Found foreign key: column module_oid_module references module(oid_module)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.module' [type = TABLE]
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.question' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column campaign_oid_campaign references campaign(oid_campaign)
+[21 Oct 2016 12:49:00]   Found foreign key: column suppporter_oid_user references suppporter(user_oid_user)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.suppporter' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column user_oid_user references user(oid_user)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.suppporter_contribution' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column contribution_oid_contribution references contribution(oid_contribution)
+[21 Oct 2016 12:49:00]   Found foreign key: column suppporter_oid_user references suppporter(user_oid_user)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.tag' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column campaign_oid_campaign references campaign(oid_campaign)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.user' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column group_oid_group references group(oid_group)
+[21 Oct 2016 12:49:00] Retrieving foreign keys for 'public.user_group' [type = TABLE]
+[21 Oct 2016 12:49:00]   Found foreign key: column group_oid_group references group(oid_group)
+[21 Oct 2016 12:49:00]   Found foreign key: column user_oid_user references user(oid_user)
+[21 Oct 2016 12:49:00] Database metadata retrieved (384 ms)
+[21 Oct 2016 12:49:00] Database connection closed
