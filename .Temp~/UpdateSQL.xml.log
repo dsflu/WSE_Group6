@@ -1,62 +1,26 @@
-[18 Oct 2016 21:30:14] DEBUG Executing SQL script
-[18 Oct 2016 21:30:14] INFO ================================================================================
-[18 Oct 2016 21:30:14] INFO outputPath= '/Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/UpdateSQL.xml'
-[18 Oct 2016 21:30:14] INFO onError= 'stop'
-[18 Oct 2016 21:30:14] INFO statementSeparator= ';'
-[18 Oct 2016 21:30:14] INFO derby.system.home= '/Users/fredlu/Documents/Webratio_workspace/.metadata/.plugins/com.webratio.commons.db/derby'
-[18 Oct 2016 21:30:14] INFO password= 'staridol516127'
-[18 Oct 2016 21:30:14] INFO url= 'jdbc:postgresql://localhost:5432/webratio_group6'
-[18 Oct 2016 21:30:14] INFO username= 'postgres'
-[18 Oct 2016 21:30:14] INFO autoCommit= 'false'
-[18 Oct 2016 21:30:14] INFO outputLogPath= '/Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/UpdateSQL.xml.log'
-[18 Oct 2016 21:30:14] INFO driverClass= 'org.postgresql.Driver'
-[18 Oct 2016 21:30:14] INFO encoding= ''
-[18 Oct 2016 21:30:14] INFO eventSocketPort= '49407'
-[18 Oct 2016 21:30:14] INFO sqlScript= '/Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/UpdateSQL.sql'
-[18 Oct 2016 21:30:14] INFO ================================================================================
-[18 Oct 2016 21:30:14] INFO Connecting to the Database...
-[18 Oct 2016 21:30:14] INFO Database connection estabilished
-[18 Oct 2016 21:30:14] INFO transaction isolation: 2
-[18 Oct 2016 21:30:14] DEBUG ================================================================================
-[18 Oct 2016 21:30:14] DEBUG Executing SQL script file: /Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/UpdateSQL.sql
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  create table "public"."group" ( "oid_group"  int4  not null, "groupname"  varchar(255), primary key ("oid_group") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."module" ( "oid_module"  int4  not null, "moduleid"  varchar(255), "modulename"  varchar(255), primary key ("oid_module") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."user" ( "oid_user"  int4  not null, "username"  varchar(255), "password"  varchar(255), "name"  varchar(255), "payment_information"  varchar(255), "birthdate"  date, primary key ("oid_user") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."campaigner" ( "user_oid_user"  int4  not null, "reputation"  int4, primary key ("user_oid_user") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."suppporter" ( "user_oid_user"  int4  not null, "wisdom"  int4, primary key ("user_oid_user") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."campaign" ( "oid_campaign"  int4  not null, "title"  varchar(255), "quality"  int4, "popularity"  int4, "expiration"  timestamp, "goal"  int4, "description"  text, primary key ("oid_campaign") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."contribution" ( "oid_contribution"  int4  not null, "amount"  int4, "description"  text, "title"  varchar(255), primary key ("oid_contribution") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."answer" ( "oid_answer"  int4  not null, "answer"  text, primary key ("oid_answer") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."question" ( "oid_question"  int4  not null, "question"  text, primary key ("oid_question") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."tag" ( "oid_tag"  int4  not null, "keyword"  varchar(255), primary key ("oid_tag") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    alter table "public"."group"  add column  "module_oid_module"  int4
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."group"   add constraint fk_group_module foreign key ("module_oid_module") references "public"."module" ("oid_module")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."group_module" ( "group_oid_group"  int4 not null, "module_oid_module"  int4 not null, primary key ("group_oid_group", "module_oid_module") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."group_module"   add constraint fk_group_module_group foreign key ("group_oid_group") references "public"."group" ("oid_group")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."group_module"   add constraint fk_group_module_module foreign key ("module_oid_module") references "public"."module" ("oid_module")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    alter table "public"."user"  add column  "group_oid_group"  int4
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."user"   add constraint fk_user_group foreign key ("group_oid_group") references "public"."group" ("oid_group")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."user_group" ( "user_oid_user"  int4 not null, "group_oid_group"  int4 not null, primary key ("user_oid_user", "group_oid_group") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."user_group"   add constraint fk_user_group_user foreign key ("user_oid_user") references "public"."user" ("oid_user")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."user_group"   add constraint fk_user_group_group foreign key ("group_oid_group") references "public"."group" ("oid_group")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    alter table "public"."contribution"  add column  "campaign_oid_campaign"  int4
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."contribution"   add constraint fk_contribution_campaign foreign key ("campaign_oid_campaign") references "public"."campaign" ("oid_campaign")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    alter table "public"."answer"  add column  "question_oid_question"  int4
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."answer"   add constraint fk_answer_question foreign key ("question_oid_question") references "public"."question" ("oid_question")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    create table "public"."suppporter_contribution" ( "suppporter_oid_user"  int4 not null, "contribution_oid_contribution"  int4 not null, primary key ("suppporter_oid_user", "contribution_oid_contribution") )
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."suppporter_contribution"   add constraint fk_suppporter_contribution_sup foreign key ("suppporter_oid_user") references "public"."suppporter" ("user_oid_user")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."suppporter_contribution"   add constraint fk_suppporter_contribution_con foreign key ("contribution_oid_contribution") references "public"."contribution" ("oid_contribution")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    alter table "public"."campaign"  add column  "campaigner_oid_user"  int4
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."campaign"   add constraint fk_campaign_campaigner foreign key ("campaigner_oid_user") references "public"."campaigner" ("user_oid_user")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    alter table "public"."tag"  add column  "campaign_oid_campaign"  int4
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."tag"   add constraint fk_tag_campaign foreign key ("campaign_oid_campaign") references "public"."campaign" ("oid_campaign")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    alter table "public"."question"  add column  "suppporter_oid_user"  int4
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."question"   add constraint fk_question_suppporter foreign key ("suppporter_oid_user") references "public"."suppporter" ("user_oid_user")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    alter table "public"."question"  add column  "campaign_oid_campaign"  int4
-[18 Oct 2016 21:30:14] DEBUG Executing statement:  alter table "public"."question"   add constraint fk_question_campaign foreign key ("campaign_oid_campaign") references "public"."campaign" ("oid_campaign")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    alter table "public"."campaigner"   add constraint fk_campaigner_user foreign key ("user_oid_user") references "public"."user" ("oid_user")
-[18 Oct 2016 21:30:14] DEBUG Executing statement:    alter table "public"."suppporter"   add constraint fk_suppporter_user foreign key ("user_oid_user") references "public"."user" ("oid_user")
-[18 Oct 2016 21:30:14] DEBUG ================================================================================
-[18 Oct 2016 21:30:15] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[18 Oct 2016 21:30:15] INFO Database connection closed
-[18 Oct 2016 21:30:15] DEBUG Total time: 451 milliseconds
+[21 Oct 2016 10:29:31] DEBUG Executing SQL script
+[21 Oct 2016 10:29:31] INFO ================================================================================
+[21 Oct 2016 10:29:31] INFO outputPath= '/Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/UpdateSQL.xml'
+[21 Oct 2016 10:29:31] INFO onError= 'stop'
+[21 Oct 2016 10:29:31] INFO statementSeparator= ';'
+[21 Oct 2016 10:29:31] INFO derby.system.home= '/Users/fredlu/Documents/Webratio_workspace/.metadata/.plugins/com.webratio.commons.db/derby'
+[21 Oct 2016 10:29:31] INFO password= 'staridol516127'
+[21 Oct 2016 10:29:31] INFO url= 'jdbc:postgresql://localhost:5432/webratio_group6'
+[21 Oct 2016 10:29:31] INFO username= 'postgres'
+[21 Oct 2016 10:29:31] INFO autoCommit= 'false'
+[21 Oct 2016 10:29:31] INFO outputLogPath= '/Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/UpdateSQL.xml.log'
+[21 Oct 2016 10:29:31] INFO driverClass= 'org.postgresql.Driver'
+[21 Oct 2016 10:29:31] INFO encoding= ''
+[21 Oct 2016 10:29:31] INFO eventSocketPort= '50911'
+[21 Oct 2016 10:29:31] INFO sqlScript= '/Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/UpdateSQL.sql'
+[21 Oct 2016 10:29:31] INFO ================================================================================
+[21 Oct 2016 10:29:31] INFO Connecting to the Database...
+[21 Oct 2016 10:29:32] INFO Database connection estabilished
+[21 Oct 2016 10:29:32] INFO transaction isolation: 2
+[21 Oct 2016 10:29:32] DEBUG ================================================================================
+[21 Oct 2016 10:29:32] DEBUG Executing SQL script file: /Users/fredlu/Documents/Webratio_workspace/WSE_Group6/.Temp~/UpdateSQL.sql
+[21 Oct 2016 10:29:32] DEBUG Executing statement:  alter table "public"."campaign"  add column  "time"  bool
+[21 Oct 2016 10:29:32] DEBUG ================================================================================
+[21 Oct 2016 10:29:32] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[21 Oct 2016 10:29:32] INFO Database connection closed
+[21 Oct 2016 10:29:32] DEBUG Total time: 253 milliseconds

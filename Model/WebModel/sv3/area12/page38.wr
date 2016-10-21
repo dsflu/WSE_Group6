@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page38" name="ContributeErroe" gr:x="580" gr:y="130">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page38" name="ContributeErroe" gr:x="655" gr:y="145">
   <ContentUnits>
     <MultiMessageUnit id="sv3#area12#page38#mssu10" name="Error_msg" gr:x="0" gr:y="0" linkOrder="sv3#area12#page38#mssu10#ln66">
       <Message xml:space="preserve">Sorry! You have already contributed to this Campaign!</Message>

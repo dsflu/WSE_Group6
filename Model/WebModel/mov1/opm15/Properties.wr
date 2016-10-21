@@ -1,0 +1,19 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="720" gr:y="375" id="mov1#opm15" name="DeleteContribution">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm15#icu15" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm15#icu15#icp39" name="contriution"/>
+      <OKLink id="mov1#opm15#icu15#oln55" name="OKFlow55" to="mov1#opm15#dlu2">
+        <LinkParameter id="mov1#opm15#icu15#oln55#par149" name="contriution_KeyCondition20 [oid_contribution]" source="mov1#opm15#icu15#icp39" target="mov1#opm15#dlu2#su38#kcond20.ent4#att14"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <DeleteUnit gr:x="310" gr:y="75" id="mov1#opm15#dlu2" name="DeleteContribution" entity="ent4">
+      <Selector id="mov1#opm15#dlu2#su38" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm15#dlu2#su38#kcond20" name="KeyCondition20" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm15#dlu2#oln56" name="OKFlow56" to="mov1#opm15#okcu14" automaticCoupling="true"/>
+      <KOLink id="mov1#opm15#dlu2#kln37" name="KOFlow37" to="mov1#opm15#kocu15" automaticCoupling="true"/>
+    </DeleteUnit>
+    <KOCollectorUnit gr:x="520" gr:y="155" id="mov1#opm15#kocu15" name="KO Port Delete Contribution"/>
+    <OKCollectorUnit gr:x="520" gr:y="55" id="mov1#opm15#okcu14" name="OK Port Delete Contribution"/>
+  </OperationUnits>
+</OperationModule>

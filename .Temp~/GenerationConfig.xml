@@ -6,14 +6,14 @@
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
     <Property name="commonsLibDir">/Applications/WebRatio/WebRatio/plugins/com.webratio.commons.libs_7.2.14.201608091213/lib</Property>
-    <Property name="dbConfigPath">/var/folders/4h/bz8jt6tx5sd5_ppk7k431gk00000gp/T/WRDBConfig5005107709708958913.xml</Property>
+    <Property name="dbConfigPath">/var/folders/4h/bz8jt6tx5sd5_ppk7k431gk00000gp/T/WRDBConfig3620193047931468128.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">/Applications/WebRatio/WebRatio/configuration/org.eclipse.osgi/bundles/49/1/.cp</Property>
     <Property name="derbySystemHome">/Users/fredlu/Documents/Webratio_workspace/.metadata/.plugins/com.webratio.commons.db/derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-    <Property name="eventSocketPort">58976</Property>
+    <Property name="eventSocketPort">50244</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201610182308</Property>
+    <Property name="generationTime">201610211027</Property>
     <Property name="helpersPluginDir">/Applications/WebRatio/WebRatio/plugins/com.webratio.generator.helpers_7.2.14.201608091213</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
@@ -24,14 +24,14 @@
     <Property name="phases">All</Property>
     <Property name="projectDir">/Users/fredlu/Documents/Webratio_workspace/WSE_Group6</Property>
     <Property name="projectName">WSE_Group6</Property>
-    <Property name="projectPath">/var/folders/4h/bz8jt6tx5sd5_ppk7k431gk00000gp/T/Project7691603321765643070.wr</Property>
+    <Property name="projectPath">/var/folders/4h/bz8jt6tx5sd5_ppk7k431gk00000gp/T/Project8487317533164213111.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">/Applications/WebRatio/WebRatio/plugins/com.webratio.ide.ui_7.2.14.201608091213</Property>
     <Property name="webappPluginDir">/Applications/WebRatio/WebRatio/plugins/com.webratio.generator.webapp_7.2.14.201608091213</Property>
     <Property name="wrBuildId">201608091213</Property>
     <Property name="wrGenerateOldValidationRules">false</Property>
-    <Property name="wrModelStatistics">pages=37|units=143</Property>
+    <Property name="wrModelStatistics">pages=38|units=185</Property>
     <Property name="wrVersion">7.2.14</Property>
   </Properties>
   <Plugins>

@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page36" name="donateSuccess" gr:x="10" gr:y="600">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area12#page36" name="donateSuccess" gr:x="145" gr:y="660">
   <ContentUnits>
-    <SelectorUnit id="sv3#area12#page36#seu4" name="SelectConAmount" gr:x="0" gr:y="0" entity="ent4">
+    <SelectorUnit id="sv3#area12#page36#seu4" name="SelectConAmount" gr:x="15" gr:y="0" entity="ent4">
       <Selector id="sv3#area12#page36#seu4#su27" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area12#page36#seu4#su27#kcond11" name="con_oid" predicate="in" implied="false"/>
       </Selector>
@@ -8,7 +8,7 @@
         <LinkParameter id="sv3#area12#page36#seu4#ln56#par103" name="minAmount_Operand1" source="ent4#att17Array" target="sv3#area12#page36#mathu1#mathv1"/>
       </Link>
     </SelectorUnit>
-    <MathUnit id="sv3#area12#page36#mathu1" name="AddAmountToPop" gr:x="145" gr:y="135" resultType="integer" defaultExpression="Operand1+Operand2">
+    <MathUnit id="sv3#area12#page36#mathu1" name="AddAmountToPop" gr:x="165" gr:y="125" resultType="integer" defaultExpression="Operand1+Operand2">
       <MathVariable id="sv3#area12#page36#mathu1#mathv1" name="Operand1"/>
       <MathVariable id="sv3#area12#page36#mathu1#mathv2" name="Operand2"/>
       <Link id="sv3#area12#page36#mathu1#ln57" name="Flow44" to="sv3#area12#page36#mssu8" type="transport" validate="true">
@@ -17,10 +17,12 @@
       </Link>
     </MathUnit>
     <GetUnit id="sv3#area12#page36#gtu11" name="GetCampaign" gr:x="240" gr:y="5" contextParameters="ctx1">
-      <Link id="sv3#area12#page36#gtu11#ln59" name="Flow34" to="sv3#area12#page36#seu5" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#area12#page36#gtu11#ln59" name="Flow34" to="sv3#area12#page36#seu5" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page36#gtu11#ln59#par172" name="CampaigntxParam.oid_campaign_cam_oid [oid_campaign]" source="sv3#area12#page36#gtu11.ctx1.ent3#att7" target="sv3#area12#page36#seu5#su28#kcond12.ent3#att7"/>
+      </Link>
       <Link id="sv3#area12#page36#gtu11#ln60" name="Flow42" to="sv3#area12#page36#seu6" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
-    <SelectorUnit id="sv3#area12#page36#seu5" name="SelectCam" gr:x="390" gr:y="125" entity="ent3">
+    <SelectorUnit id="sv3#area12#page36#seu5" name="SelectCam" gr:x="405" gr:y="125" entity="ent3">
       <Selector id="sv3#area12#page36#seu5#su28" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area12#page36#seu5#su28#kcond12" name="cam_oid" predicate="in" implied="false"/>
       </Selector>
@@ -28,7 +30,7 @@
         <LinkParameter id="sv3#area12#page36#seu5#ln61#par107" name="popularity_Operand2" source="ent3#att12Array" target="sv3#area12#page36#mathu1#mathv2"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="sv3#area12#page36#seu6" name="SelectCam" gr:x="450" gr:y="0" entity="ent3">
+    <SelectorUnit id="sv3#area12#page36#seu6" name="SelectCam" gr:x="465" gr:y="0" entity="ent3">
       <Selector id="sv3#area12#page36#seu6#su29" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#area12#page36#seu6#su29#kcond13" name="cam_oid" predicate="in" implied="false"/>
       </Selector>
@@ -36,7 +38,7 @@
         <LinkParameter id="sv3#area12#page36#seu6#ln69#par87" name="oid_campaign_cam_oid" source="ent3#att7Array" target="sv3#miu16.mov1#opm13#icu13#icp36"/>
       </Link>
     </SelectorUnit>
-    <MultiMessageUnit id="sv3#area12#page36#mssu8" name="Result" gr:x="20" gr:y="150" linkOrder="sv3#area12#page36#mssu8#ln2">
+    <MultiMessageUnit id="sv3#area12#page36#mssu8" name="Result" gr:x="0" gr:y="200" linkOrder="sv3#area12#page36#mssu8#ln2">
       <Link id="sv3#area12#page36#mssu8#ln2" name="Confirm" to="sv3#miu16" type="normal" validate="true">
         <LinkParameter id="sv3#area12#page36#mssu8#ln2#par28" name="Result_PASSING_result" sourceLinkParameter="sv3#area12#page36#mathu1#ln57#par106" target="sv3#miu16.mov1#opm13#icu13#icp35"/>
       </Link>
@@ -63,6 +65,20 @@
           <layout:Link link="sv3#area12#page36#mssu8#ln2"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

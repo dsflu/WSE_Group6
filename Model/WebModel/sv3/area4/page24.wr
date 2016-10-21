@@ -1,9 +1,13 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="490" gr:y="0" id="sv3#area4#page24" name="ContributionListPage">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area4#page24#pwu11" name="ContributionList" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att15 ent4#att16 ent4#att17">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area4#page24#pwu11" name="ContributionList" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att15 ent4#att16 ent4#att17" linkOrder="sv3#area4#page24#pwu11#ln105 sv3#area4#page24#pwu11#ln106">
       <Selector id="sv3#area4#page24#pwu11#su20" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area4#page24#pwu11#su20#rcond6" name="CampaignToContribution" predicate="in" implied="false" role="rel1#role1"/>
       </Selector>
+      <Link id="sv3#area4#page24#pwu11#ln105" name="Flow105" to="sv3#area4#stu6" type="normal" validate="true">
+        <LinkParameter id="sv3#area4#page24#pwu11#ln105#par175" name="oid_contribution_ContributiontxParam.oid_contribution" source="data[].ent4#att14" target="sv3#area4#stu6.ctx2.ent4#att14"/>
+      </Link>
+      <Link id="sv3#area4#page24#pwu11#ln106" name="MakeContribution" to="sv3#miu14" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -13,6 +17,8 @@
           <layout:Attribute attribute="ent4#att15"/>
           <layout:Attribute attribute="ent4#att16"/>
           <layout:Attribute attribute="ent4#att17"/>
+          <layout:Link link="sv3#area4#page24#pwu11#ln105"/>
+          <layout:Link link="sv3#area4#page24#pwu11#ln106"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

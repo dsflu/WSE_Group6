@@ -1,9 +1,12 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="175" id="sv3#area12#page28" name="CampaignList">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="125" gr:y="170" id="sv3#area12#page28" name="CampaignList">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area12#page28#pwu13" name="CampaignList" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att8" linkOrder="sv3#area12#page28#pwu13#ln32">
       <Link id="sv3#area12#page28#pwu13#ln32" name="SeeContribution" to="sv3#area12#page30#dau7" type="normal" validate="true">
         <LinkParameter id="sv3#area12#page28#pwu13#ln32#par47" name="oid_campaign_KeyCondition1 [oid_campaign]" source="data[].ent3#att7" target="sv3#area12#page30#dau7#su22#kcond3.ent3#att7"/>
       </Link>
+      <Selector id="sv3#area12#page28#pwu13#su41" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area12#page28#pwu13#su41#acond9" name="time" predicate="eq" booleanOperator="or" implied="false" attributes="ent3#att22"/>
+      </Selector>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

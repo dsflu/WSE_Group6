@@ -18,6 +18,7 @@
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="goal" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="text" size="2147483647" decimalDigits="0" name="description" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="campaigner_oid_user" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="-7" indexed="unknown" autoIncrement="false" type="bool" size="1" decimalDigits="0" name="time" primaryKey="false" notNull="false"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="campaigner" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="user_oid_user" primaryKey="true" notNull="true"/>

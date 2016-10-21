@@ -13,6 +13,9 @@
       <Link id="sv3#area4#page23#dau3#ln16" name="SeeContribution" to="sv3#area4#page24#pwu11" type="normal" validate="true">
         <LinkParameter id="sv3#area4#page23#dau3#ln16#par67" name="oid_campaign_CampaignToContribution [oid_campaign]" source="data.ent3#att7" target="sv3#area4#page24#pwu11#su20#rcond6.ent3#att7"/>
       </Link>
+      <Link id="sv3#area4#page23#dau3#ln109" name="Flow109" to="sv3#area4#stu7" type="transport" validate="true">
+        <LinkParameter id="sv3#area4#page23#dau3#ln109#par178" name="oid_campaign_CampaigntxParam.oid_campaign" source="data.ent3#att7" target="sv3#area4#stu7.ctx1.ent3#att7"/>
+      </Link>
     </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

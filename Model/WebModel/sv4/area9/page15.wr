@@ -1,9 +1,12 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="510" gr:y="5" id="sv4#area9#page15" name="MyContributionPage">
   <ContentUnits>
-    <PowerIndexUnit id="sv4#area9#page15#pwu9" name="ContributionList" gr:x="60" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att15 ent4#att16 ent4#att17">
+    <PowerIndexUnit id="sv4#area9#page15#pwu9" name="ContributionList" gr:x="60" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att15 ent4#att16 ent4#att17" linkOrder="sv4#area9#page15#pwu9#ln74">
       <Selector id="sv4#area9#page15#pwu9#su9" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#area9#page15#pwu9#su9#rcond7" name="CampaignToContribution" predicate="in" implied="false" role="rel1#role1"/>
       </Selector>
+      <Link id="sv4#area9#page15#pwu9#ln74" name="Details" to="sv4#area9#page15#dau10" type="normal" validate="true">
+        <LinkParameter id="sv4#area9#page15#pwu9#ln74#par147" name="oid_contribution_KeyCondition22 [oid_contribution]" source="data[].ent4#att14" target="sv4#area9#page15#dau10#su40#kcond22.ent4#att14"/>
+      </Link>
     </PowerIndexUnit>
     <MultiMessageUnit gr:x="195" gr:y="145" id="sv4#area9#page15#mssu5" name="TagMessage"/>
     <SelectorUnit gr:x="0" gr:y="130" id="sv4#area9#page15#seu3" name="Selector3" entity="ent7">
@@ -14,6 +17,14 @@
         <LinkParameter id="sv4#area9#page15#seu3#ln26#par83" name="keyword_Shown Messages" source="ent7#att21Array" target="sv4#area9#page15#mssu5.shownMessages"/>
       </Link>
     </SelectorUnit>
+    <DataUnit gr:x="295" gr:y="10" id="sv4#area9#page15#dau10" name="ContributionDetails" entity="ent4" displayAttributes="ent4#att15 ent4#att16 ent4#att17" linkOrder="sv4#area9#page15#dau10#ln77">
+      <Selector id="sv4#area9#page15#dau10#su40" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area9#page15#dau10#su40#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#area9#page15#dau10#ln77" name="DeleteContribution" to="sv4#miu19" type="normal" validate="true">
+        <LinkParameter id="sv4#area9#page15#dau10#ln77#par148" name="oid_contribution_contriution" source="data.ent4#att14" target="sv4#miu19.mov1#opm15#icu15#icp39"/>
+      </Link>
+    </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -22,6 +33,7 @@
           <layout:Attribute attribute="ent4#att15"/>
           <layout:Attribute attribute="ent4#att16"/>
           <layout:Attribute attribute="ent4#att17"/>
+          <layout:Link link="sv4#area9#page15#pwu9#ln74"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -53,7 +65,14 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area9#page15#dau10">
+          <layout:Attribute attribute="ent4#att15"/>
+          <layout:Attribute attribute="ent4#att16"/>
+          <layout:Attribute attribute="ent4#att17"/>
+          <layout:Link link="sv4#area9#page15#dau10#ln77"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

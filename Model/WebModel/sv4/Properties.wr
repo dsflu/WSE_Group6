@@ -1,7 +1,7 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="CampaignerSite View" landmarks="sv4#area6 sv4#area8 sv4#area9 sv4#area11 sv4#lou3" homePage="sv4#area6#page7">
   <OperationUnits>
-    <LogoutUnit gr:x="105" gr:y="305" id="sv4#lou3" name="Logout" siteView="sv2" landmark="true"/>
-    <ModuleInstanceUnit gr:x="310" gr:y="310" id="sv4#miu5" action="true" moduleId="mov1#opm4" name="Creat Campaign">
+    <LogoutUnit gr:x="95" gr:y="190" id="sv4#lou3" name="Logout" siteView="sv2" landmark="true"/>
+    <ModuleInstanceUnit gr:x="520" gr:y="290" id="sv4#miu5" action="true" moduleId="mov1#opm4" name="Creat Campaign">
       <KOLink id="sv4#miu5#kln8" name="KOFlow8" to="sv4#page12" automaticCoupling="true"/>
       <OKLink id="sv4#miu5#oln27" name="OKFlow27" to="sv4#area10#page13#enu9" automaticCoupling="true"/>
       <Link id="sv4#miu5#ln20" name="Flow26" to="sv4#area10#stu3" type="transport" validate="true">
@@ -27,6 +27,14 @@
     <ModuleInstanceUnit gr:x="-90" gr:y="1020" id="sv4#miu11" action="true" name="FinishCreatingTag" moduleId="mov1#opm8">
       <KOLink id="sv4#miu11#kln19" name="KOFlow19" to="sv4#page12" automaticCoupling="true"/>
       <OKLink id="sv4#miu11#oln23" name="OKFlow23" to="sv4#area9#page11" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1110" gr:y="600" id="sv4#miu18" action="true" name="DeleteCampaign" moduleId="mov1#opm14">
+      <OKLink id="sv4#miu18#oln53" name="OKFlow53" to="sv4#area9#page11" automaticCoupling="true"/>
+      <KOLink id="sv4#miu18#kln35" name="KOFlow35" to="sv4#page12" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1650" gr:y="725" id="sv4#miu19" action="true" name="DeleteContribution" moduleId="mov1#opm15">
+      <OKLink id="sv4#miu19#oln54" name="OKFlow54" to="sv4#area9#page15#pwu9" automaticCoupling="true"/>
+      <KOLink id="sv4#miu19#kln36" name="KOFlow36" to="sv4#page12#mssu4" automaticCoupling="true"/>
     </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

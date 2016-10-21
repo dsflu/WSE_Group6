@@ -1,3 +1,16 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="560" gr:y="710" id="sv3#area4" name="SearchCampaign" landmark="true" defaultPage="sv3#area4#page21">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="610" gr:y="1140" id="sv3#area4" name="SearchCampaign" landmark="true" defaultPage="sv3#area4#page21">
+  <OperationUnits>
+    <SetUnit gr:x="610" gr:y="170" id="sv3#area4#stu6" name="SetContribution" contextParameters="ctx2"/>
+    <GetUnit gr:x="615" gr:y="285" id="sv3#area4#gtu16" name="GetContribution" contextParameters="ctx2" linkOrder="sv3#area4#gtu16#ln107">
+      <Link id="sv3#area4#gtu16#ln107" name="Flow107" to="sv3#miu14" type="transport" validate="true">
+        <LinkParameter id="sv3#area4#gtu16#ln107#par176" name="ContributiontxParam.oid_contribution_contribution" source="sv3#area4#gtu16.ctx2.ent4#att14" target="sv3#miu14.mov1#opm10#icu10#icp31"/>
+      </Link>
+    </GetUnit>
+    <GetUnit gr:x="685" gr:y="455" id="sv3#area4#gtu17" name="GetSupporter" contextParameters="UserCtxParam" linkOrder="sv3#area4#gtu17#ln108">
+      <Link id="sv3#area4#gtu17#ln108" name="Flow108" to="sv3#miu14" type="transport" validate="true">
+        <LinkParameter id="sv3#area4#gtu17#ln108#par177" name="UserCtxParam.oid_user_supporter" source="sv3#area4#gtu17.UserCtxParam" target="sv3#miu14.mov1#opm10#icu10#icp30"/>
+      </Link>
+    </GetUnit>
+    <SetUnit gr:x="345" gr:y="370" id="sv3#area4#stu7" name="SetCampaign" contextParameters="ctx1"/>
+  </OperationUnits>
 </Area>

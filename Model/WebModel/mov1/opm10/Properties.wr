@@ -18,7 +18,7 @@
       <OutputCollectorParameter id="mov1#opm10#okcu9#ocp7" name="testv"/>
     </OKCollectorUnit>
     <KOCollectorUnit id="mov1#opm10#kocu10" name="KO Port6" gr:x="925" gr:y="30"/>
-    <SelectorUnit id="mov1#opm10#seu7" name="CheckIfCam_ConExists" gr:x="715" gr:y="170" entity="ent4">
+    <SelectorUnit id="mov1#opm10#seu7" name="CheckIfCam_ConExists" gr:x="735" gr:y="145" entity="ent4">
       <Selector id="mov1#opm10#seu7#su30" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#opm10#seu7#su30#rcond16" name="CampaignToContribution" predicate="in" implied="false" role="rel1#role1"/>
         <KeyCondition id="mov1#opm10#seu7#su30#kcond14" name="KeyCondition15" predicate="in" implied="false"/>

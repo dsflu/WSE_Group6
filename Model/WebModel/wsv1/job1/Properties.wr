@@ -1,0 +1,27 @@
+<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="65" gr:y="90" id="wsv1#job1" name="CheckCampaignJob">
+  <OperationUnits>
+    <InitJobUnit id="wsv1#job1#iju1" name="Init Job" gr:x="0" gr:y="20">
+      <OKLink id="wsv1#job1#iju1#oln58" name="OKFlow58" to="wsv1#job1#tmu1" automaticCoupling="true"/>
+    </InitJobUnit>
+    <TimeUnit gr:x="155" gr:y="20" id="wsv1#job1#tmu1" name="CurrentTime" linkOrder="wsv1#job1#tmu1#ln84">
+      <Link id="wsv1#job1#tmu1#ln84" name="Flow84" to="wsv1#job1#seu14" type="transport" validate="true">
+        <LinkParameter id="wsv1#job1#tmu1#ln84#par153" name="Current/Input Timestamp_Timestamp" source="currentTimestamp" target="wsv1#job1#seu14#su42#acond8"/>
+      </Link>
+    </TimeUnit>
+    <SelectorUnit gr:x="335" gr:y="0" id="wsv1#job1#seu14" name="TimeSelector" entity="ent3">
+      <Selector id="wsv1#job1#seu14#su42" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="wsv1#job1#seu14#su42#acond8" name="Timestamp" predicate="lt" booleanOperator="or" implied="false" attributes="ent3#att11"/>
+      </Selector>
+      <OKLink id="wsv1#job1#seu14#oln60" name="OKFlow60" to="wsv1#job1#mfu3">
+        <LinkParameter id="wsv1#job1#seu14#oln60#par154" name="oid_campaign_KeyCondition23 [oid_campaign]" source="ent3#att7Array" target="wsv1#job1#mfu3#su43#kcond23.ent3#att7"/>
+        <LinkParameter id="wsv1#job1#seu14#oln60#par155" name="0_time" sourceValue="0" target="wsv1#job1#mfu3.ent3#att22"/>
+      </OKLink>
+    </SelectorUnit>
+    <ModifyUnit gr:x="530" gr:y="0" id="wsv1#job1#mfu3" name="UpdateCampaign" entity="ent3">
+      <Selector id="wsv1#job1#mfu3#su43" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="wsv1#job1#mfu3#su43#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+  </OperationUnits>
+  <Trigger id="wsv1#job1#trg1" name="EveryHourCheck" schedulePolicy="everyXHours" hours="1"/>
+</Job>

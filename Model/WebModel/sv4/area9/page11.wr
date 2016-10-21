@@ -5,17 +5,28 @@
         <LinkParameter id="sv4#area9#page11#gtu3#ln19#par61" name="UserCtxParam.oid_user_CampaignerToCampaign [oid_user]" source="sv4#area9#page11#gtu3.UserCtxParam" target="sv4#area9#page11#pwu3#su3#rcond1.userOID"/>
       </Link>
     </GetUnit>
-    <PowerIndexUnit gr:x="250" gr:y="0" id="sv4#area9#page11#pwu3" name="CampaignList" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att8 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13" linkOrder="sv4#area9#page11#pwu3#ln33 sv4#area9#page11#pwu3#ln23">
+    <PowerIndexUnit gr:x="250" gr:y="0" id="sv4#area9#page11#pwu3" name="CampaignList" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att8 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13" linkOrder="sv4#area9#page11#pwu3#ln70">
       <Selector id="sv4#area9#page11#pwu3#su3" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#area9#page11#pwu3#su3#rcond1" name="CampaignerToCampaign" predicate="in" implied="false" role="rel3#role5"/>
       </Selector>
-      <Link id="sv4#area9#page11#pwu3#ln33" name="SeeContribution" to="sv4#area9#page15#pwu9" type="normal" validate="true">
-        <LinkParameter id="sv4#area9#page11#pwu3#ln33#par84" name="oid_campaign_CampaignToContribution [oid_campaign]" source="data[].ent3#att7" target="sv4#area9#page15#pwu9#su9#rcond7.ent3#att7"/>
-      </Link>
-      <Link id="sv4#area9#page11#pwu3#ln23" name="SeeTag" to="sv4#area9#page15#seu3" type="normal" validate="true">
-        <LinkParameter id="sv4#area9#page11#pwu3#ln23#par82" name="oid_campaign_CampaignToTag [oid_campaign]" source="data[].ent3#att7" target="sv4#area9#page15#seu3#su21#rcond10.ent3#att7"/>
+      <Link id="sv4#area9#page11#pwu3#ln70" name="Details" to="sv4#area9#page11#dau9" type="normal" validate="true">
+        <LinkParameter id="sv4#area9#page11#pwu3#ln70#par138" name="oid_campaign_KeyCondition21 [oid_campaign]" source="data[].ent3#att7" target="sv4#area9#page11#dau9#su39#kcond21.ent3#att7"/>
       </Link>
     </PowerIndexUnit>
+    <DataUnit gr:x="220" gr:y="140" id="sv4#area9#page11#dau9" name="CampaignDetails" entity="ent3" displayAttributes="ent3#att8 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13 ent3#att22" linkOrder="sv4#area9#page11#dau9#ln71 sv4#area9#page11#dau9#ln72 sv4#area9#page11#dau9#ln73">
+      <Selector id="sv4#area9#page11#dau9#su39" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area9#page11#dau9#su39#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#area9#page11#dau9#ln71" name="DeleteCampaign" to="sv4#miu18" type="normal" validate="true">
+        <LinkParameter id="sv4#area9#page11#dau9#ln71#par139" name="oid_campaign_campaign" source="data.ent3#att7" target="sv4#miu18.mov1#opm14#icu14#icp37"/>
+      </Link>
+      <Link id="sv4#area9#page11#dau9#ln72" name="SeeTag" to="sv4#area9#page15#seu3" type="normal" validate="true">
+        <LinkParameter id="sv4#area9#page11#dau9#ln72#par140" name="oid_campaign_CampaignToTag [oid_campaign]" source="data.ent3#att7" target="sv4#area9#page15#seu3#su21#rcond10.ent3#att7"/>
+      </Link>
+      <Link id="sv4#area9#page11#dau9#ln73" name="SeeContribution" to="sv4#area9#page15#pwu9" type="normal" validate="true">
+        <LinkParameter id="sv4#area9#page11#dau9#ln73#par141" name="oid_campaign_CampaignToContribution [oid_campaign]" source="data.ent3#att7" target="sv4#area9#page15#pwu9#su9#rcond7.ent3#att7"/>
+      </Link>
+    </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -27,8 +38,7 @@
           <layout:Attribute attribute="ent3#att11"/>
           <layout:Attribute attribute="ent3#att12"/>
           <layout:Attribute attribute="ent3#att13"/>
-          <layout:Link link="sv4#area9#page11#pwu3#ln33"/>
-          <layout:Link link="sv4#area9#page11#pwu3#ln23"/>
+          <layout:Link link="sv4#area9#page11#pwu3#ln70"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -44,7 +54,20 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area9#page11#dau9">
+          <layout:Attribute attribute="ent3#att8"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att11"/>
+          <layout:Attribute attribute="ent3#att12"/>
+          <layout:Attribute attribute="ent3#att13"/>
+          <layout:Attribute attribute="ent3#att22"/>
+          <layout:Link link="sv4#area9#page11#dau9#ln71"/>
+          <layout:Link link="sv4#area9#page11#dau9#ln72"/>
+          <layout:Link link="sv4#area9#page11#dau9#ln73"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

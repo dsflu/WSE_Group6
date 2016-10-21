@@ -1,14 +1,116 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="685" gr:y="795" id="sv3#area12#page5" name="DonateSuccess">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="985" id="sv3#area12#page5" name="DonateSuccess">
   <ContentUnits>
-    <MultiMessageUnit id="sv3#area12#page5#mssu3" name="ThankYou!" gr:x="0" gr:y="0">
+    <MultiMessageUnit id="sv3#area12#page5#mssu3" name="ThankYou!" gr:x="35" gr:y="0" linkOrder="sv3#area12#page5#mssu3#ln143">
       <Message xml:space="preserve">Thank you! Rich supporter! </Message>
+      <Link id="sv3#area12#page5#mssu3#ln143" name="Back" to="sv3#miu22" automaticCoupling="true" type="normal" validate="true"/>
     </MultiMessageUnit>
+    <SelectorUnit id="sv3#area12#page5#seu18" name="SelectorPopularity" gr:x="355" gr:y="255" entity="ent3">
+      <Selector id="sv3#area12#page5#seu18#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area12#page5#seu18#su47#kcond26" name="CampaignKeyCondition" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area12#page5#seu18#ln137" name="Flow132" to="sv3#area12#page5#mathu10" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page5#seu18#ln137#par220" name="popularity_popularity" source="ent3#att12Array" target="sv3#area12#page5#mathu10#mathv16"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#area12#page5#seu19" name="SelectorQuality" gr:x="230" gr:y="160" entity="ent3">
+      <Selector id="sv3#area12#page5#seu19#su46" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area12#page5#seu19#su46#kcond25" name="CampaignKeyCondition" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area12#page5#seu19#ln136" name="Flow131" to="sv3#area12#page5#mathu10" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page5#seu19#ln136#par219" name="quality_quality" source="ent3#att13Array" target="sv3#area12#page5#mathu10#mathv17"/>
+      </Link>
+    </SelectorUnit>
+    <GetUnit gr:x="310" gr:y="50" id="sv3#area12#page5#gtu15" name="GetCampaign" contextParameters="ctx1">
+      <Link id="sv3#area12#page5#gtu15#ln103" name="Flow103" to="sv3#area12#page5#seu19" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page5#gtu15#ln103#par173" name="CampaigntxParam.oid_campaign_CampaignKeyCondition [oid_campaign]" source="sv3#area12#page5#gtu15.ctx1.ent3#att7" target="sv3#area12#page5#seu19#su46#kcond25.ent3#att7"/>
+      </Link>
+      <Link id="sv3#area12#page5#gtu15#ln104" name="Flow104" to="sv3#area12#page5#seu18" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page5#gtu15#ln104#par174" name="CampaigntxParam.oid_campaign_CampaignKeyCondition [oid_campaign]" source="sv3#area12#page5#gtu15.ctx1.ent3#att7" target="sv3#area12#page5#seu18#su47#kcond26.ent3#att7"/>
+      </Link>
+      <Link id="sv3#area12#page5#gtu15#ln117" name="Flow117" to="sv3#area12#page5#seu21" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page5#gtu15#ln117#par214" name="CampaigntxParam.oid_campaign_CampaignToCampaigner [oid_campaign]" source="sv3#area12#page5#gtu15.ctx1.ent3#att7" target="sv3#area12#page5#seu21#su52#rcond22.ent3#att7"/>
+      </Link>
+      <Link id="sv3#area12#page5#gtu15#ln144" name="Flow144" to="sv3#area12#page5#seu23" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page5#gtu15#ln144#par241" name="CampaigntxParam.oid_campaign_KeyCondition29 [oid_campaign]" source="sv3#area12#page5#gtu15.ctx1.ent3#att7" target="sv3#area12#page5#seu23#su55#kcond29.ent3#att7"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="25" gr:y="120" id="sv3#area12#page5#seu21" name="SelectCampaigner" entity="ent1">
+      <Selector id="sv3#area12#page5#seu21#su52" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#area12#page5#seu21#su52#rcond22" name="CampaignToCampaigner" predicate="in" implied="false" role="rel3#role6"/>
+      </Selector>
+      <Link id="sv3#area12#page5#seu21#ln135" name="Flow130" to="sv3#area12#page5#mathu10" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page5#seu21#ln135#par218" name="reputation_ReputationOfCampaigner" source="ent1#att4Array" target="sv3#area12#page5#mathu10#mathv18"/>
+      </Link>
+    </SelectorUnit>
+    <MathUnit id="sv3#area12#page5#mathu10" name="AddCampaignerReputation" gr:x="0" gr:y="340" resultType="integer" defaultExpression="popularity+quality+ReputationOfCampaigner">
+      <MathVariable id="sv3#area12#page5#mathu10#mathv16" name="popularity"/>
+      <MathVariable id="sv3#area12#page5#mathu10#mathv17" name="quality"/>
+      <MathVariable id="sv3#area12#page5#mathu10#mathv18" name="ReputationOfCampaigner"/>
+      <Link id="sv3#area12#page5#mathu10#ln140" name="Flow140" to="sv3#miu22" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page5#mathu10#ln140#par225" name="Result_result" source="result" target="sv3#miu22.mov1#opm18#icu18#icp41"/>
+      </Link>
+    </MathUnit>
+    <SelectorUnit gr:x="640" gr:y="50" id="sv3#area12#page5#seu23" name="Selector23" entity="ent3">
+      <Selector id="sv3#area12#page5#seu23#su55" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area12#page5#seu23#su55#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#area12#page5#seu23#ln146" name="Flow146" to="sv3#area12#page5#mssu21" type="transport" validate="true">
+        <LinkParameter id="sv3#area12#page5#seu23#ln146#par52" name="oid_campaign_Shown Messages" source="ent3#att7Array" target="sv3#area12#page5#mssu21.shownMessages"/>
+      </Link>
+    </SelectorUnit>
+    <MultiMessageUnit gr:x="685" gr:y="295" id="sv3#area12#page5#mssu21" name="Message21"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#area12#page5#mssu3"/>
+        <layout:Unit unitId="sv3#area12#page5#mssu3">
+          <layout:Link link="sv3#area12#page5#mssu3#ln143"/>
+        </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page5#mssu21"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

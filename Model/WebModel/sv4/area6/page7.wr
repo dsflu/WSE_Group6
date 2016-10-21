@@ -1,11 +1,11 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv4#area6#page7" name="CampaignerPage">
   <ContentUnits>
-    <GetUnit gr:x="0" gr:y="10" id="sv4#area6#page7#gtu1" name="GetCampaigner" contextParameters="UserCtxParam">
+    <GetUnit gr:x="25" gr:y="10" id="sv4#area6#page7#gtu1" name="GetCampaigner" contextParameters="UserCtxParam">
       <Link id="sv4#area6#page7#gtu1#ln10" name="Flow10" to="sv4#area6#page7#dau2" type="transport" validate="true">
         <LinkParameter id="sv4#area6#page7#gtu1#ln10#par54" name="UserCtxParam.oid_user_KeyCondition2 [oid_user]" source="sv4#area6#page7#gtu1.UserCtxParam" target="sv4#area6#page7#dau2#su2#kcond2.userOID"/>
       </Link>
     </GetUnit>
-    <DataUnit gr:x="180" gr:y="0" id="sv4#area6#page7#dau2" name="CampaignerDetails" entity="ent1" displayAll="true">
+    <DataUnit gr:x="205" gr:y="0" id="sv4#area6#page7#dau2" name="CampaignerDetails" entity="ent1" displayAttributes="userName password email User#att1 User#att2 ent1#att4">
       <Selector id="sv4#area6#page7#dau2#su2" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#area6#page7#dau2#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -19,11 +19,25 @@
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="password"/>
           <layout:Attribute attribute="email"/>
-          <layout:Attribute attribute="User#att2"/>
           <layout:Attribute attribute="User#att1"/>
+          <layout:Attribute attribute="User#att2"/>
           <layout:Attribute attribute="ent1#att4"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

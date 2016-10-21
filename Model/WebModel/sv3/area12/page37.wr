@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="420" gr:y="0" id="sv3#area12#page37" name="SearchPage">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#area12#page37#enu4" name="TitleForm" linkOrder="sv3#area12#page37#enu4#ln113">
+      <Field id="sv3#area12#page37#enu4#fld19" name="title" type="string" modifiable="true"/>
+      <Link id="sv3#area12#page37#enu4#ln113" name="SearchTitle" to="sv3#area12#page39#pwu12" type="normal" validate="true">
+        <LinkParameter id="sv3#area12#page37#enu4#ln113#par191" name="1_time" target="sv3#area12#page39#pwu12#su50#acond13" sourceValue="1"/>
+        <LinkParameter id="sv3#area12#page37#enu4#ln113#par192" name="title_title" source="sv3#area12#page37#enu4#fld19" target="sv3#area12#page39#pwu12#su50#acond14"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit gr:x="110" gr:y="0" id="sv3#area12#page37#enu10" name="TagForm" linkOrder="sv3#area12#page37#enu10#ln112">
+      <Field id="sv3#area12#page37#enu10#fld20" name="tag" type="string" modifiable="true"/>
+      <Link id="sv3#area12#page37#enu10#ln112" to="sv3#miu21" type="normal" validate="true" name="SearchKeyword">
+        <LinkParameter id="sv3#area12#page37#enu10#ln112#par183" name="tag_keyword" source="sv3#area12#page37#enu10#fld20" target="sv3#miu21.mov1#opm9#icu9#icp29"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page37#enu4">
+          <layout:Field field="sv3#area12#page37#enu4#fld19"/>
+          <layout:Link link="sv3#area12#page37#enu4#ln113"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area12#page37#enu10">
+          <layout:Field field="sv3#area12#page37#enu10#fld20"/>
+          <layout:Link link="sv3#area12#page37#enu10#ln112"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

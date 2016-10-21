@@ -60,7 +60,7 @@
       <db:JoinColumn attribute="userOID" name="user_oid_user"/>
     </Generalization>
   </Entity>
-  <Entity gr:x="10" gr:y="345" id="ent3" name="Campaign" duration="persistent" attributeOrder="ent3#att7 ent3#att8 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13" db:database="db1" db:table="campaign">
+  <Entity gr:x="10" gr:y="345" id="ent3" name="Campaign" duration="persistent" attributeOrder="ent3#att7 ent3#att8 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13 ent3#att22" db:database="db1" db:table="campaign">
     <Attribute id="ent3#att7" key="true" name="oid_campaign" type="integer" db:column="oid_campaign"/>
     <Attribute id="ent3#att8" name="title" type="string" key="false" db:column="title"/>
     <Attribute id="ent3#att13" name="quality" type="integer" key="false" db:column="quality"/>
@@ -68,6 +68,7 @@
     <Attribute id="ent3#att11" name="expiration" type="timestamp" key="false" db:column="expiration"/>
     <Attribute id="ent3#att10" name="goal" type="integer" key="false" db:column="goal"/>
     <Attribute id="ent3#att9" name="description" type="text" key="false" db:column="description"/>
+    <Attribute id="ent3#att22" name="time" type="boolean" db:column="time"/>
   </Entity>
   <Entity gr:x="725" gr:y="475" id="ent4" name="Contribution" duration="persistent" attributeOrder="ent4#att14 ent4#att15 ent4#att16 ent4#att17" db:database="db1" db:table="contribution">
     <Attribute id="ent4#att14" key="true" name="oid_contribution" type="integer" db:column="oid_contribution"/>
@@ -143,6 +144,5 @@
       <db:JoinColumn attribute="ent7#att20" name="oid_tag"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="web1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/webratio_group6" username="postgres" cryptedPassword="true" password="c3Rhcmlkb2w1MTYxMjc=" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="web1" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/web1" username="postgres" cryptedPassword="true" password="MTkyNDIz" schema="public"/>
 </DataModel>

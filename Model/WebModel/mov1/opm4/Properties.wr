@@ -13,6 +13,7 @@
         <LinkParameter id="mov1#opm4#icu4#oln6#par59" name="campaigner_Campaigner.oid_user(CampaignToCampaigner)" source="mov1#opm4#icu4#icp24" target="mov1#opm4#cru3.rel3#role6.userOID"/>
         <LinkParameter id="mov1#opm4#icu4#oln6#par42" name="0_popularity" sourceValue="0" target="mov1#opm4#cru3.ent3#att12"/>
         <LinkParameter id="mov1#opm4#icu4#oln6#par43" name="0_quality" sourceValue="0" target="mov1#opm4#cru3.ent3#att13"/>
+        <LinkParameter id="mov1#opm4#icu4#oln6#par122" name="1_time" sourceValue="true" target="mov1#opm4#cru3.ent3#att22"/>
       </OKLink>
       <InputCollectorParameter id="mov1#opm4#icu4#icp24" name="campaigner"/>
     </InputCollectorUnit>
