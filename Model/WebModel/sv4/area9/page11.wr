@@ -13,13 +13,10 @@
         <LinkParameter id="sv4#area9#page11#pwu3#ln70#par138" name="oid_campaign_KeyCondition21 [oid_campaign]" source="data[].ent3#att7" target="sv4#area9#page11#dau9#su39#kcond21.ent3#att7"/>
       </Link>
     </PowerIndexUnit>
-    <DataUnit gr:x="220" gr:y="140" id="sv4#area9#page11#dau9" name="CampaignDetails" entity="ent3" displayAttributes="ent3#att8 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13 ent3#att22" linkOrder="sv4#area9#page11#dau9#ln71 sv4#area9#page11#dau9#ln72 sv4#area9#page11#dau9#ln73">
+    <DataUnit gr:x="220" gr:y="140" id="sv4#area9#page11#dau9" name="CampaignDetails" entity="ent3" displayAttributes="ent3#att8 ent3#att9 ent3#att10 ent3#att11 ent3#att12 ent3#att13 ent3#att22" linkOrder="sv4#area9#page11#dau9#ln72 sv4#area9#page11#dau9#ln73">
       <Selector id="sv4#area9#page11#dau9#su39" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#area9#page11#dau9#su39#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv4#area9#page11#dau9#ln71" name="DeleteCampaign" to="sv4#miu18" type="normal" validate="true">
-        <LinkParameter id="sv4#area9#page11#dau9#ln71#par139" name="oid_campaign_campaign" source="data.ent3#att7" target="sv4#miu18.mov1#opm14#icu14#icp37"/>
-      </Link>
       <Link id="sv4#area9#page11#dau9#ln72" name="SeeTag" to="sv4#area9#page15#seu3" type="normal" validate="true">
         <LinkParameter id="sv4#area9#page11#dau9#ln72#par140" name="oid_campaign_CampaignToTag [oid_campaign]" source="data.ent3#att7" target="sv4#area9#page15#seu3#su21#rcond10.ent3#att7"/>
       </Link>
@@ -63,7 +60,6 @@
           <layout:Attribute attribute="ent3#att12"/>
           <layout:Attribute attribute="ent3#att13"/>
           <layout:Attribute attribute="ent3#att22"/>
-          <layout:Link link="sv4#area9#page11#dau9#ln71"/>
           <layout:Link link="sv4#area9#page11#dau9#ln72"/>
           <layout:Link link="sv4#area9#page11#dau9#ln73"/>
         </layout:Unit>

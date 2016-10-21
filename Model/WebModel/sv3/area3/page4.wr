@@ -4,7 +4,9 @@
       <Link id="sv3#area3#page4#pwu2#ln48" name="SeeContribution" to="sv3#area3#page4#pwu4" type="normal" validate="true">
         <LinkParameter id="sv3#area3#page4#pwu2#ln48#par99" name="oid_campaign_CampaignToContribution [oid_campaign]" source="data[].ent3#att7" target="sv3#area3#page4#pwu4#su12#rcond9.ent3#att7"/>
       </Link>
-      <Selector id="sv3#area3#page4#pwu2#su13" defaultPolicy="fill" booleanOperator="and"/>
+      <Selector id="sv3#area3#page4#pwu2#su13" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area3#page4#pwu2#su13#acond2" name="time" predicate="eq" booleanOperator="or" implied="false" attributes="ent3#att22" value="1"/>
+      </Selector>
       <Link id="sv3#area3#page4#pwu2#ln31" name="Vote" to="sv3#area3#miu17" type="normal" validate="true">
         <LinkParameter id="sv3#area3#page4#pwu2#ln31#par44" name="oid_campaign_cam_id" source="data[].ent3#att7" target="sv3#area3#miu17.mov1#opm12#icu12#icp32"/>
       </Link>

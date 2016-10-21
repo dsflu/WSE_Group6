@@ -8,7 +8,6 @@
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="oid_answer" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="text" size="2147483647" decimalDigits="0" name="answer" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="question_oid_question" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="question_oid_question" foreignColumnName="oid_question" name="fk_answer_question" foreignTableName="question" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="campaign" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="oid_campaign" primaryKey="true" notNull="true"/>
@@ -20,12 +19,10 @@
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="text" size="2147483647" decimalDigits="0" name="description" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="campaigner_oid_user" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="-7" indexed="unknown" autoIncrement="false" type="bool" size="1" decimalDigits="0" name="time" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="campaigner_oid_user" foreignColumnName="user_oid_user" name="fk_campaign_campaigner" foreignTableName="campaigner" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="campaigner" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="user_oid_user" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="reputation" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="user_oid_user" foreignColumnName="oid_user" name="fk_campaigner_user" foreignTableName="user" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="contribution" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="oid_contribution" primaryKey="true" notNull="true"/>
@@ -33,19 +30,15 @@
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="text" size="2147483647" decimalDigits="0" name="description" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="varchar" size="255" decimalDigits="0" name="title" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="campaign_oid_campaign" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="campaign_oid_campaign" foreignColumnName="oid_campaign" name="fk_contribution_campaign" foreignTableName="campaign" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="group" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="oid_group" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="varchar" size="255" decimalDigits="0" name="groupname" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="module_oid_module" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="module_oid_module" foreignColumnName="oid_module" name="fk_group_module" foreignTableName="module" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="group_module" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="group_oid_group" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="module_oid_module" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="group_oid_group" foreignColumnName="oid_group" name="fk_group_module_group" foreignTableName="group" foreignSchemaName="public"/>
-    <ForeignKey localColumnName="module_oid_module" foreignColumnName="oid_module" name="fk_group_module_module" foreignTableName="module" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="module" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="oid_module" primaryKey="true" notNull="true"/>
@@ -57,25 +50,19 @@
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="text" size="2147483647" decimalDigits="0" name="question" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="suppporter_oid_user" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="campaign_oid_campaign" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="campaign_oid_campaign" foreignColumnName="oid_campaign" name="fk_question_campaign" foreignTableName="campaign" foreignSchemaName="public"/>
-    <ForeignKey localColumnName="suppporter_oid_user" foreignColumnName="user_oid_user" name="fk_question_suppporter" foreignTableName="suppporter" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="suppporter" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="user_oid_user" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="wisdom" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="user_oid_user" foreignColumnName="oid_user" name="fk_suppporter_user" foreignTableName="user" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="suppporter_contribution" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="suppporter_oid_user" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="contribution_oid_contribution" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="contribution_oid_contribution" foreignColumnName="oid_contribution" name="fk_suppporter_contribution_con" foreignTableName="contribution" foreignSchemaName="public"/>
-    <ForeignKey localColumnName="suppporter_oid_user" foreignColumnName="user_oid_user" name="fk_suppporter_contribution_sup" foreignTableName="suppporter" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="tag" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="oid_tag" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="varchar" size="255" decimalDigits="0" name="keyword" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="campaign_oid_campaign" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="campaign_oid_campaign" foreignColumnName="oid_campaign" name="fk_tag_campaign" foreignTableName="campaign" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="user" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="oid_user" primaryKey="true" notNull="true"/>
@@ -85,12 +72,9 @@
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="varchar" size="255" decimalDigits="0" name="payment_information" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="date" size="13" decimalDigits="0" name="birthdate" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="group_oid_group" primaryKey="false" notNull="false"/>
-    <ForeignKey localColumnName="group_oid_group" foreignColumnName="oid_group" name="fk_user_group" foreignTableName="group" foreignSchemaName="public"/>
   </Table>
   <Table type="TABLE" schema="public" ignoreIndexes="false" name="user_group" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="user_oid_user" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="int4" size="10" decimalDigits="0" name="group_oid_group" primaryKey="true" notNull="true"/>
-    <ForeignKey localColumnName="group_oid_group" foreignColumnName="oid_group" name="fk_user_group_group" foreignTableName="group" foreignSchemaName="public"/>
-    <ForeignKey localColumnName="user_oid_user" foreignColumnName="oid_user" name="fk_user_group_user" foreignTableName="user" foreignSchemaName="public"/>
   </Table>
 </DBMetaData>

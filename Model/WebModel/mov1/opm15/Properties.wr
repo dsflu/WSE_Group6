@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="700" gr:y="395" id="mov1#opm15" name="DeleteContribution">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="720" gr:y="375" id="mov1#opm15" name="DeleteContribution">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm15#icu15" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm15#icu15#icp39" name="contriution"/>

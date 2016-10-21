@@ -28,10 +28,6 @@
       <KOLink id="sv4#miu11#kln19" name="KOFlow19" to="sv4#page12" automaticCoupling="true"/>
       <OKLink id="sv4#miu11#oln23" name="OKFlow23" to="sv4#area9#page11" automaticCoupling="true"/>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="1110" gr:y="600" id="sv4#miu18" action="true" name="DeleteCampaign" moduleId="mov1#opm14">
-      <OKLink id="sv4#miu18#oln53" name="OKFlow53" to="sv4#area9#page11" automaticCoupling="true"/>
-      <KOLink id="sv4#miu18#kln35" name="KOFlow35" to="sv4#page12" automaticCoupling="true"/>
-    </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="1650" gr:y="725" id="sv4#miu19" action="true" name="DeleteContribution" moduleId="mov1#opm15">
       <OKLink id="sv4#miu19#oln54" name="OKFlow54" to="sv4#area9#page15#pwu9" automaticCoupling="true"/>
       <KOLink id="sv4#miu19#kln36" name="KOFlow36" to="sv4#page12#mssu4" automaticCoupling="true"/>

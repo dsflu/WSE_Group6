@@ -1,13 +1,13 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="585" gr:y="330" id="mov1#opm18" name="UpdateCampaigner">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm18#icu18" gr:x="10" gr:y="65" linkOrder="mov1#opm18#icu18#ln45">
+    <InputCollectorUnit id="mov1#opm18#icu18" gr:x="10" gr:y="65" linkOrder="mov1#opm18#icu18#ln23">
       <InputCollectorParameter id="mov1#opm18#icu18#icp41" name="result"/>
       <InputCollectorParameter id="mov1#opm18#icu18#icp40" name="campaign"/>
-      <OKLink id="mov1#opm18#icu18#oln68" name="OKFlow68" to="mov1#opm18#seu13">
-        <LinkParameter id="mov1#opm18#icu18#oln68#par157" name="campaign_cam_camer [oid_campaign]" source="mov1#opm18#icu18#icp40" target="mov1#opm18#seu13#su25#rcond12.ent3#att7"/>
+      <OKLink id="mov1#opm18#icu18#oln68" name="OKFlow68" to="mov1#opm18#seu22">
+        <LinkParameter id="mov1#opm18#icu18#oln68#par150" name="campaign_cam_camer [oid_campaign]" source="mov1#opm18#icu18#icp40" target="mov1#opm18#seu22#su54#rcond12.ent3#att7"/>
       </OKLink>
-      <Link id="mov1#opm18#icu18#ln45" name="Flow45" to="mov1#opm18#mfu5" type="transport" validate="true">
-        <LinkParameter id="mov1#opm18#icu18#ln45#par158" name="result_reputation" source="mov1#opm18#icu18#icp41" target="mov1#opm18#mfu5.ent1#att4"/>
+      <Link id="mov1#opm18#icu18#ln23" name="Flow23" to="mov1#opm18#mfu5" type="transport" validate="true">
+        <LinkParameter id="mov1#opm18#icu18#ln23#par53" name="result_reputation" source="mov1#opm18#icu18#icp41" target="mov1#opm18#mfu5.ent1#att4"/>
       </Link>
     </InputCollectorUnit>
     <ModifyUnit gr:x="330" gr:y="40" id="mov1#opm18#mfu5" name="UpdateCampaigner" entity="ent1">
@@ -22,11 +22,13 @@
       <OutputCollectorParameter id="mov1#opm18#okcu15#ocp10" name="Output Port Parameter10"/>
     </OKCollectorUnit>
     <KOCollectorUnit gr:x="575" gr:y="165" id="mov1#opm18#kocu16" name="KO Port16"/>
-    <SelectorUnit gr:x="200" gr:y="205" id="mov1#opm18#seu13" name="Selector13" entity="ent1">
-      <Selector id="mov1#opm18#seu13#su25" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="mov1#opm18#seu13#su25#rcond12" name="cam_camer" predicate="in" implied="false" role="rel3#role6"/>
+    <SelectorUnit gr:x="270" gr:y="225" id="mov1#opm18#seu22" name="Selector22" entity="ent1">
+      <Selector id="mov1#opm18#seu22#su54" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm18#seu22#su54#rcond12" name="cam_camer" predicate="in" implied="false" role="rel3#role6"/>
       </Selector>
-      <OKLink id="mov1#opm18#seu13#oln59" name="OKFlow59" to="mov1#opm18#mfu5" automaticCoupling="true"/>
+      <OKLink id="mov1#opm18#seu22#oln70" name="OKFlow70" to="mov1#opm18#mfu5">
+        <LinkParameter id="mov1#opm18#seu22#oln70#par95" name="CampaignToCampaigner.oid_user_KeyCondition27 [oid_user]" source="userOIDArray" target="mov1#opm18#mfu5#su53#kcond27.userOID"/>
+      </OKLink>
     </SelectorUnit>
   </OperationUnits>
 </OperationModule>

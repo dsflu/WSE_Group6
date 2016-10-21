@@ -6,24 +6,14 @@
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
     <Property name="commonsLibDir">/Applications/WebRatio/WebRatio/plugins/com.webratio.commons.libs_7.2.14.201608091213/lib</Property>
-<<<<<<< HEAD
-    <Property name="dbConfigPath">/var/folders/4h/bz8jt6tx5sd5_ppk7k431gk00000gp/T/WRDBConfig3915446329820305363.xml</Property>
-=======
-    <Property name="dbConfigPath">/var/folders/4h/bz8jt6tx5sd5_ppk7k431gk00000gp/T/WRDBConfig212208100553419065.xml</Property>
->>>>>>> origin/master
+    <Property name="dbConfigPath">/var/folders/4h/bz8jt6tx5sd5_ppk7k431gk00000gp/T/WRDBConfig4943638397462470790.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">/Applications/WebRatio/WebRatio/configuration/org.eclipse.osgi/bundles/49/1/.cp</Property>
     <Property name="derbySystemHome">/Users/fredlu/Documents/Webratio_workspace/.metadata/.plugins/com.webratio.commons.db/derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-<<<<<<< HEAD
-    <Property name="eventSocketPort">49889</Property>
+    <Property name="eventSocketPort">57226</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201610211258</Property>
-=======
-    <Property name="eventSocketPort">63375</Property>
-    <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201610191230</Property>
->>>>>>> origin/master
+    <Property name="generationTime">201610211333</Property>
     <Property name="helpersPluginDir">/Applications/WebRatio/WebRatio/plugins/com.webratio.generator.helpers_7.2.14.201608091213</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
@@ -34,22 +24,14 @@
     <Property name="phases">All</Property>
     <Property name="projectDir">/Users/fredlu/Documents/Webratio_workspace/WSE_Group6</Property>
     <Property name="projectName">WSE_Group6</Property>
-<<<<<<< HEAD
-    <Property name="projectPath">/var/folders/4h/bz8jt6tx5sd5_ppk7k431gk00000gp/T/Project114655390331842470.wr</Property>
-=======
-    <Property name="projectPath">/var/folders/4h/bz8jt6tx5sd5_ppk7k431gk00000gp/T/Project6516138464210733520.wr</Property>
->>>>>>> origin/master
+    <Property name="projectPath">/var/folders/4h/bz8jt6tx5sd5_ppk7k431gk00000gp/T/Project8472796464324887819.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">/Applications/WebRatio/WebRatio/plugins/com.webratio.ide.ui_7.2.14.201608091213</Property>
     <Property name="webappPluginDir">/Applications/WebRatio/WebRatio/plugins/com.webratio.generator.webapp_7.2.14.201608091213</Property>
     <Property name="wrBuildId">201608091213</Property>
     <Property name="wrGenerateOldValidationRules">false</Property>
-<<<<<<< HEAD
-    <Property name="wrModelStatistics">pages=38|units=184</Property>
-=======
-    <Property name="wrModelStatistics">pages=37|units=150</Property>
->>>>>>> origin/master
+    <Property name="wrModelStatistics">pages=38|units=183</Property>
     <Property name="wrVersion">7.2.14</Property>
   </Properties>
   <Plugins>

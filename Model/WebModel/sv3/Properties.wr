@@ -8,7 +8,7 @@
       <KOLink id="sv3#miu7#kln15" name="KOFlow15" to="sv3#page8#mssu2" automaticCoupling="true"/>
       <OKLink id="sv3#miu7#oln13" name="OKFlow13" to="sv3#area7#page9" automaticCoupling="true"/>
     </ModuleInstanceUnit>
-    <LogoutUnit gr:x="-350" gr:y="275" id="sv3#lou1" name="Logout" siteView="sv2" landmark="true"/>
+    <LogoutUnit gr:x="-185" gr:y="270" id="sv3#lou1" name="Logout" siteView="sv2" landmark="true"/>
     <ModuleInstanceUnit gr:x="560" gr:y="575" id="sv3#miu12" action="true" name="SearchCampaign" moduleId="mov1#opm9">
       <KOLink id="sv3#miu12#kln21" name="KOFlow21" to="sv3#page8#mssu2" automaticCoupling="true"/>
       <OKLink id="sv3#miu12#oln25" name="OKFlow25" to="sv3#area4#page23#pwu5">
@@ -37,9 +37,9 @@
       </OKLink>
     </ModuleInstanceUnit>
     <SetUnit id="sv3#stu11" name="SetCam" gr:x="1131" gr:y="2019" contextParameters="ctx1"/>
-    <ModuleInstanceUnit gr:x="345" gr:y="2565" id="sv3#miu22" action="true" name="UpdateCampaigner" moduleId="mov1#opm18">
+    <ModuleInstanceUnit gr:x="455" gr:y="2370" id="sv3#miu22" action="true" name="UpdateCampaigner" moduleId="mov1#opm18">
       <KOLink id="sv3#miu22#kln41" name="KOFlow41" to="sv3#page8" automaticCoupling="true"/>
-      <OKLink id="sv3#miu22#oln31" name="OKFlow31" to="sv3#area12#page28#pwu13"/>
+      <OKLink id="sv3#miu22#oln59" name="OKFlow59" to="sv3#area12#page27#mssu6" automaticCoupling="true"/>
     </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>
